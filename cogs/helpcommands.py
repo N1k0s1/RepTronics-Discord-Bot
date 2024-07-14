@@ -12,8 +12,12 @@ class HelpCommands(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    @discord.slash_command(name="goodbye", description="Says Goodbye!", guild_ids= id)
+    async def goodbye(self, ctx):
+        await ctx.respond('Goodbye!')
+
     @discord.slash_command(name="gen2", description="Display information about Generation 2 AirPods", guild_id = id)
-    async def gen2info(interaction: discord.Interaction, context):
+    async def gen2info(self, ctx):
         embed = discord.Embed(title="Gen 2", color=discord.Color.blue())
         product = data['versions']['gen2']
 
@@ -27,7 +31,7 @@ class HelpCommands(commands.Cog):
             seller = data['sellers'][seller_name]
             embed.add_field(name=seller_name, value=seller['store_link'], inline=True)
 
-        await interaction.response.send_message(embed=embed)
+        await ctx.respond.send_message(embed=embed)
 
 
     @discord.slash_command(name="gen3", description="Display information about Generation 3 AirPods", guild_id = id)
