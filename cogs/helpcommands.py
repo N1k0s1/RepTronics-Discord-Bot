@@ -12,11 +12,7 @@ class HelpCommands(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @discord.slash_command(name="goodbye", description="Says Goodbye!", guild_ids= id)
-    async def goodbye(self, ctx):
-        await ctx.respond('Goodbye!')
-
-    @discord.slash_command(name="gen2", description="Display information about Generation 2 AirPods", guild_id = id)
+    @discord.slash_command(name="gen2", description="Displays information about Geneation 2 AirPod Replicas!", guild_ids= id)
     async def gen2info(self, ctx):
         embed = discord.Embed(title="Gen 2", color=discord.Color.blue())
         product = data['versions']['gen2']
@@ -31,11 +27,10 @@ class HelpCommands(commands.Cog):
             seller = data['sellers'][seller_name]
             embed.add_field(name=seller_name, value=seller['store_link'], inline=True)
 
-        await ctx.respond.send_message(embed=embed)
-
+        await ctx.respond(embed=embed)
 
     @discord.slash_command(name="gen3", description="Display information about Generation 3 AirPods", guild_id = id)
-    async def gen3info(interaction: discord.Interaction, context):
+    async def gen3info(self, ctx):
         embed = discord.Embed(title="Gen 3", color=discord.Color.blue())
         product = data['versions']['gen3']
 
@@ -49,10 +44,10 @@ class HelpCommands(commands.Cog):
             seller = data['sellers'][seller_name]
             embed.add_field(name=seller_name, value=seller['store_link'], inline=True)
 
-        await interaction.response.send_message(embed=embed)
+        await ctx.respond(embed=embed)
 
     @discord.slash_command(name="pro1", description="Display information about Pro 1 AirPods", guild_id = id)
-    async def pro1info(interaction: discord.Interaction, context):
+    async def pro1info(self, ctx):
         embed = discord.Embed(title="Pro 1", color=discord.Color.blue())
         product = data['versions']['pro1']
 
@@ -66,7 +61,7 @@ class HelpCommands(commands.Cog):
             seller = data['sellers'][seller_name]
             embed.add_field(name=seller_name, value=seller['store_link'], inline=True)
 
-        await interaction.response.send_message(embed=embed)
+        await ctx.respond(embed=embed)
 
     @discord.slash_command(name="pro2", description="Display information about Pro 2 AirPods", guild_id = id)
     async def pro2info(interaction: discord.Interaction, context):
@@ -83,7 +78,7 @@ class HelpCommands(commands.Cog):
             seller = data['sellers'][seller_name]
             embed.add_field(name=seller_name, value=seller['store_link'], inline=True)
 
-        await interaction.response.send_message(embed=embed)
+        await ctx.respond(embed=embed)
 
     @discord.slash_command(name="maxes", description="Display information about AirPod Maxes", guild_id = id)
     async def maxesinfo(interaction: discord.Interaction, context):
@@ -100,7 +95,7 @@ class HelpCommands(commands.Cog):
             seller = data['sellers'][seller_name]
             embed.add_field(name=seller_name, value=seller['store_link'], inline=True)
 
-        await interaction.response.send_message(embed=embed)
+        await ctx.respond(embed=embed)
 
 
 
@@ -112,7 +107,8 @@ class HelpCommands(commands.Cog):
         embed.add_field(name="WhatsApp", value=seller['whatsapp'], inline=False)
         embed.add_field(name="Discord", value=seller['discord'], inline=False)
         embed.add_field(name="Website", value=seller['store_link'], inline=False)
-        await interaction.response.send_message(embed=embed)
+
+        await ctx.respond(embed=embed)
 
     @discord.slash_command(name="dyson", description="Information about Dyson", guild_id = id)
     async def dyson(interaction: discord.Interaction, context):
@@ -123,7 +119,7 @@ class HelpCommands(commands.Cog):
         embed.add_field(name="Discord", value=seller['discord'], inline=False)
         embed.add_field(name="Website", value=seller['store_link'], inline=False)
 
-        await interaction.response.send_message(embed=embed)
+        await ctx.respond(embed=embed)
 
     @discord.slash_command(name="jenny", description="Information about Jenny", guild_id = id)
     async def jenny(interaction: discord.Interaction, context):
@@ -134,7 +130,7 @@ class HelpCommands(commands.Cog):
         embed.add_field(name="Discord", value=seller['discord'], inline=False)
         embed.add_field(name="Website", value=seller['store_link'], inline=False)
 
-        await interaction.response.send_message(embed=embed)
+        await ctx.respond(embed=embed)
 
     @discord.slash_command(name="beschan", description="Information about Beschan", guild_id = id)
     async def gen2info(interaction: discord.Interaction, context):
@@ -145,7 +141,7 @@ class HelpCommands(commands.Cog):
         embed.add_field(name="Discord", value=seller['discord'], inline=False)
         embed.add_field(name="Website", value=seller['store_link'], inline=False)
 
-        await interaction.response.send_message(embed=embed)
+        await ctx.respond(embed=embed)
 
     @discord.slash_command(name="mikeym", description="Information about Mike-YM", guild_id = id)
     async def mikeym(interaction: discord.Interaction, context):
@@ -156,7 +152,7 @@ class HelpCommands(commands.Cog):
         embed.add_field(name="Discord", value=seller['discord'], inline=False)
         embed.add_field(name="Website", value=seller['store_link'], inline=False)
 
-        await interaction.response.send_message(embed=embed)
+        await ctx.respond(embed=embed)
 
     @discord.slash_command(name="jdfoot", description="Information for JD-Foot", guild_id = id)
     async def gen2info(interaction: discord.Interaction, context):
@@ -167,10 +163,10 @@ class HelpCommands(commands.Cog):
         embed.add_field(name="Discord", value=seller['discord'], inline=False)
         embed.add_field(name="Website", value=seller['store_link'], inline=False)
 
-        await interaction.response.send_message(embed=embed)
+        await ctx.respond(embed=embed)
 
     @discord.slash_command(name="bxm", description="Information for BXM", guild_id = id)
-    async def bxm(interaction: discord.Interaction, context):
+    async def bxm(self, interaction):
         embed = discord.Embed(title="BXM", color=discord.Color.blue())
         seller = data['sellers']['BXM']
 
@@ -178,7 +174,7 @@ class HelpCommands(commands.Cog):
         embed.add_field(name="Discord", value=seller['discord'], inline=False)
         embed.add_field(name="Website", value=seller['store_link'], inline=False)
 
-        await interaction.response.send_message(embed=embed)
-
+        await ctx.respond(embed=embed)
+        
 def setup(bot):
     bot.add_cog(HelpCommands(bot))
