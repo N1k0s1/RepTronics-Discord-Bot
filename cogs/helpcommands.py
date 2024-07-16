@@ -64,7 +64,7 @@ class HelpCommands(commands.Cog):
         await ctx.respond(embed=embed)
 
     @discord.slash_command(name="pro2", description="Display information about Pro 2 AirPods", guild_id = id)
-    async def pro2info(interaction: discord.Interaction, context):
+    async def pro2info(self, ctx):
         embed = discord.Embed(title="Pro 2", color=discord.Color.blue())
         product = data['versions']['pro2']
 
@@ -81,7 +81,7 @@ class HelpCommands(commands.Cog):
         await ctx.respond(embed=embed)
 
     @discord.slash_command(name="maxes", description="Display information about AirPod Maxes", guild_id = id)
-    async def maxesinfo(interaction: discord.Interaction, context):
+    async def maxesinfo(self, ctx):
         embed = discord.Embed(title="Maxes", color=discord.Color.blue())
         product = data['versions']['maxes']
 
@@ -100,7 +100,7 @@ class HelpCommands(commands.Cog):
 
 
     @discord.slash_command(name="hicity", description="Information about HiCity", guild_id = id)
-    async def hicity(interaction: discord.Interaction, context):
+    async def hicityinfo(self, ctx):
         embed = discord.Embed(title="HiCity", color=discord.Color.blue())
         seller = data['sellers']['HiCity']
 
@@ -111,7 +111,7 @@ class HelpCommands(commands.Cog):
         await ctx.respond(embed=embed)
 
     @discord.slash_command(name="dyson", description="Information about Dyson", guild_id = id)
-    async def dyson(interaction: discord.Interaction, context):
+    async def dysoninfo(self, ctx):
         embed = discord.Embed(title="Dyson", color=discord.Color.blue())
         seller = data['sellers']['Dyson']
 
@@ -122,7 +122,7 @@ class HelpCommands(commands.Cog):
         await ctx.respond(embed=embed)
 
     @discord.slash_command(name="jenny", description="Information about Jenny", guild_id = id)
-    async def jenny(interaction: discord.Interaction, context):
+    async def jennyinfo(self, ctx):
         embed = discord.Embed(title="Jenny", color=discord.Color.blue())
         seller = data['sellers']['Jenny']
 
@@ -133,7 +133,7 @@ class HelpCommands(commands.Cog):
         await ctx.respond(embed=embed)
 
     @discord.slash_command(name="beschan", description="Information about Beschan", guild_id = id)
-    async def gen2info(interaction: discord.Interaction, context):
+    async def beschaninfo(self, ctx):
         embed = discord.Embed(title="Beschan", color=discord.Color.blue())
         seller = data['sellers']['Beschan']
 
@@ -144,7 +144,7 @@ class HelpCommands(commands.Cog):
         await ctx.respond(embed=embed)
 
     @discord.slash_command(name="mikeym", description="Information about Mike-YM", guild_id = id)
-    async def mikeym(interaction: discord.Interaction, context):
+    async def mikeyminfo(self, ctx):
         embed = discord.Embed(title="Mike-YM", color=discord.Color.blue())
         seller = data['sellers']['Mike-YM']
 
@@ -155,7 +155,7 @@ class HelpCommands(commands.Cog):
         await ctx.respond(embed=embed)
 
     @discord.slash_command(name="jdfoot", description="Information for JD-Foot", guild_id = id)
-    async def gen2info(interaction: discord.Interaction, context):
+    async def jdfootinfo(self, ctx):
         embed = discord.Embed(title="JD-Foot", color=discord.Color.blue())
         seller = data['sellers']['JdFoot']
 
@@ -166,7 +166,7 @@ class HelpCommands(commands.Cog):
         await ctx.respond(embed=embed)
 
     @discord.slash_command(name="bxm", description="Information for BXM", guild_id = id)
-    async def bxm(self, interaction):
+    async def bxminfo(self, ctx):
         embed = discord.Embed(title="BXM", color=discord.Color.blue())
         seller = data['sellers']['BXM']
 
