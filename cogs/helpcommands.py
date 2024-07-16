@@ -12,6 +12,7 @@ class HelpCommands(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+
     @discord.slash_command(name="gen2", description="Displays information about Geneation 2 AirPod Replicas!", guild_ids= id)
     async def gen2info(self, ctx):
         embed = discord.Embed(title="Gen 2", color=discord.Color.blue())
@@ -176,5 +177,19 @@ class HelpCommands(commands.Cog):
 
         await ctx.respond(embed=embed)
         
+# TESTING SECTION
+class MyView(discord.ui.View):
+    @discord.ui.button(label="Click me!", style=discord.ButtonStyle.primary, emoji="😎")
+    async def button_callback(self, button, interaction):
+        await interaction.response.send_message("You clicked the button!")
+
+    @discord.slash_command(name="testingbutton", description= "Uses a button of the users choosing", guild_id = id)
+    async def testingbutton(self, ctx):
+        await ctx.respond("This is a button!", view=MyView())
+
+    @discord.slash_command(name="goodbye", description="Says Goodbye!", guild_ids= id)
+    async def goodbye(self, ctx):
+        await ctx.respond('Goodbye!')
+
 def setup(bot):
     bot.add_cog(HelpCommands(bot))
