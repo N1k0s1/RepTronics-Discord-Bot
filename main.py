@@ -1,7 +1,7 @@
-id = [1255437522629169285]
+id = [1261831251254317066]
 import discord
 bot = discord.Bot()
-
+    
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user}")
@@ -35,5 +35,13 @@ async def sync(ctx):
     await bot.sync_commands()
     await ctx.respond(f"Succesfully synced commands")
 
+class MyView(discord.ui.View):
+    @discord.ui.button(label="Click me!", style=discord.ButtonStyle.primary, emoji="😎")
+    async def button_callback(self, button, interaction):
+        await interaction.response.send_message("You clicked the button!")
 
-bot.run('tokenhere')
+@bot.slash_command(name="button", description= "Uses a button of the users choosing", guild_id = id)
+async def button(ctx):
+    await ctx.respond("This is a button!", view=MyView())
+
+bot.run('')

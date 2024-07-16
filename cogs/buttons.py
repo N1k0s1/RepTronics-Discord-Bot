@@ -17,8 +17,8 @@ class MyView(discord.ui.View): # Create a class called MyView that subclasses di
     async def button_callback(self, button, interaction):
         await interaction.response.send_message("You clicked the button!") # Send a message when the button is clicked
 
-@discord.slash_command(guild_id = id) # Create a slash command
-async def button(ctx):
+@discord.slash_command(name="buttons", description= "Unloads a cog of the users choosing", guild_id = id) # Create a slash command
+async def buttons(ctx):
     await ctx.respond("This is a button!", view=MyView()) # Send a message with our View class that contains the button
 
 def setup(bot):
