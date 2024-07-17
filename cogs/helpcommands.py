@@ -181,8 +181,8 @@ class HelpCommands(commands.Cog):
 class MyView(discord.ui.View):
     @discord.ui.button(label="Click me!", style=discord.ButtonStyle.primary, emoji="😎")
     async def button_callback(self, button, interaction):
-        await interaction.response.send_message("You clicked the button!")
-
+        await interaction.response.send_message("You clicked the button!")\
+            
     @discord.slash_command(name="testingbutton", description= "Uses a button of the users choosing", guild_id = id)
     async def testingbutton(self, ctx):
         await ctx.respond("This is a button!", view=MyView())

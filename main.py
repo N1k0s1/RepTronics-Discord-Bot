@@ -56,10 +56,6 @@ async def button(ctx):
 class Gen2View(discord.ui.View):
     def __init__(self):
         super().__init__()
-        self.add_item(discord.ui.Button(label='Button 1', custom_id='button1'))
-        self.add_item(discord.ui.Button(label='Button 2', custom_id='button2'))
-        self.add_item(discord.ui.Button(label='Button 3', custom_id='button3'))
-        self.add_item(discord.ui.Button(label='Button 4', custom_id='button4'))
 
     @discord.ui.button(label='Button 1', custom_id='button1')
     async def on_button1(self, button: discord.ui.Button, interaction: discord.Interaction):
@@ -81,6 +77,7 @@ class Gen2View(discord.ui.View):
         await interaction.response.send_message('Button 1', embed=embed1, ephemeral=True)
 
     # Repeat for the other buttons
+
 @bot.slash_command(name="gen2test", description="Show the gen 2 menu", guild_id = id)
 async def gen2test(ctx):
     await ctx.respond('Choose an option:', view=Gen2View())
