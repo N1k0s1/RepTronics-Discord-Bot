@@ -3,19 +3,53 @@
         "gen2jl": {
             "chipmodels": "v1.0 | UNKNOWN",
             "features": ["General Features + 3-4 Hour Battery Life)"],
-            "price": "$35USD",  
+            "price": "$N/A USD",  
             "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
-            "note": "Renaming, Find My, Audio Share, Live Listen, Pop-up, Battery Report, In-Ear Detection, About Information, Apple Watch Compatibility features are supported by all currently sold units. Versions will show specific features. iCloud Connect is not supported by any replica."
+            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
 
         },
         "gen21562u": {
             "chipmodels": "v3.1U | Airoha 1562U",
             "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Improved Wireless Charging | App"],
-            "price": "$40USD",  
+            "price": "$N/AA USD",  
             "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
-            "note": "Renaming, Find My, Audio Share, Live Listen, Pop-up, Battery Report, In-Ear Detection, About Information, Apple Watch Compatibility features are supported by all currently sold units. Versions will show specific features. iCloud Connect is not supported by any replica."
+            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
 
-
+        },
+        "gen21562e": {
+            "chipmodels": "v3.1M | Airoha 1562E",
+            "features": ["General Featues | 5-9 Hour Battery Life | Quick Switch | Improved Sound | Improved Build Quality | Improved Wireless Charging | App"],
+            "price": "$N/AA USD",  
+            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
+        },
+        "gen3jl": {
+            "chipmodels": "v1.0 | UNKNOWN",
+            "features": ["General Featues | 3-4 Hour Battery Life | Force Touch"],
+            "price": "$N/AA USD",  
+            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
+        },
+        "gen3a10": {
+            "chipmodels": "v1.1 Huilian | Huilian A10",
+            "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
+            "price": "$N/AA USD",  
+            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
+        },
+        "gen31562u": {
+            "chipmodels": "v1.1U | Airoha 1562U",
+            "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
+            "price": "$N/AA USD",  
+            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
+        },
+        "gen31562e": {
+            "chipmodels": "v1.1E | Airoha 1562E",
+            "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
+            "price": "$N/AA USD",  
+            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
 
         }
 
@@ -27,12 +61,12 @@
             "discord": "jdfoot"
         },
         "HiCity": {
-            "store_link": "https://hicity.com",
+            "store_link": "https://linktr.ee/hicity.reptronics  ",
             "whatsapp": "",
             "discord": "jackhicity"
         },
         "Jenny": {
-            "store_link": "https://jenius.store/index.php#top",
+            "store_link": "https://linktr.ee/jenny.reptronics",
             "whatsapp": "",
             "discord": "jennychen3329"
         },
