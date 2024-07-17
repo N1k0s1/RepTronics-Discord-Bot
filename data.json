@@ -1,43 +1,21 @@
 {
     "versions": {
-        "gen2": {
-            "chipmodels": "AB1562M / AB1562U / AB1562E / HUILIAN B24",
-            "features": ["General Features + QuickSwitch (AB1562E only)"],
+        "gen2jl": {
+            "chipmodels": "v1.0 | UNKNOWN",
+            "features": ["General Features + 3-4 Hour Battery Life)"],
             "price": "$35USD",  
             "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
             "note": "Renaming, Find My, Audio Share, Live Listen, Pop-up, Battery Report, In-Ear Detection, About Information, Apple Watch Compatibility features are supported by all currently sold units. Versions will show specific features. iCloud Connect is not supported by any replica."
 
         },
-        "gen3": {
-            "chipmodels": "BES 2500 / HUILIAN A10, A10S / AB1562E",
-            "features": ["General Features + Force Touch | Spatial Audio | QuickSwitch (BES 2500 and AB1562E Only)"],
+        "gen21562u": {
+            "chipmodels": "v3.1U | Airoha 1562U",
+            "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Improved Wireless Charging | App"],
             "price": "$40USD",  
             "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
             "note": "Renaming, Find My, Audio Share, Live Listen, Pop-up, Battery Report, In-Ear Detection, About Information, Apple Watch Compatibility features are supported by all currently sold units. Versions will show specific features. iCloud Connect is not supported by any replica."
 
-        },
-        "pro1": {
-            "chipmodels": "AB1562M / AB1562U / AB1562E / HUILIAN B24 / BLUETRUM 8892A",
-            "features": ["General Features + Active Noise Cancellation | Transparency Mode | Force Touch | Spatial Audio (All chips except BLUETRUM 8892A) | QuickSwitch (AB1562E only))"],
-            "price": "$29-$58USD",  
-            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
-            "note": "Renaming, Find My, Audio Share, Live Listen, Pop-up, Battery Report, In-Ear Detection, About Information, Apple Watch Compatibility features are supported by all currently sold units. Versions will show specific features. iCloud Connect is not supported by any replica."
 
-        },
-        "pro2": {
-            "chipmodels": "AB1562M / AB1562U / AB1562E / HUILIAN B24 / BLUETRUM 8922",
-            "features": ["General Features + Active Noise Cancellation | Transparency Mode | Force Touch | Case Speakers | Swipe Volume Control | Spatial Audio (All chips except BLUETRUM 8892A) | QuickSwitch (AB1562E only)"],
-            "price": "$30-$60USD",  
-            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
-            "note": "Renaming, Find My, Audio Share, Live Listen, Pop-up, Battery Report, In-Ear Detection, About Information, Apple Watch Compatibility features are supported by all currently sold units. Versions will show specific features. iCloud Connect is not supported by any replica."
-
-        },
-        "maxes": {
-            "chipmodels": "AB1561M / BLUETRUM 8892E",
-            "features": ["General Features + Active Noise Cancellation | Transparency Mode (| Force Touch | Spatial Audio | QuickSwitch | Case Speakers | Swipe Volume Control | AB1561M only)"],
-            "price": "$100-$120USD",  
-            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
-            "note": "Renaming, Find My, Audio Share, Live Listen, Pop-up, Battery Report, In-Ear Detection, About Information, Apple Watch Compatibility features are supported by all currently sold units. Versions will show specific features. iCloud Connect is not supported by any replica."
 
         }
 
