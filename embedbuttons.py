@@ -128,26 +128,50 @@ class Pro2View(discord.ui.View):
 
 # Maxes - Plastic Buttons/Embeds
 
-class MaxesView(discord.ui.View):
+class PlasticMaxes(discord.ui.View):
     def __init__(self):
         super().__init__()
 
     @discord.ui.button(label='JL', custom_id='JL')
     async def on_button1(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = genembed("Pro 2 | JL", "pro2jl")
+        embed1 = genembed("Maxes (Plastic) | JL", "maxesjl")
         await interaction.response.send_message('JL', embed=embed1, ephemeral=True)
 
     @discord.ui.button(label='Zhongke Lanxun', custom_id='zl')
     async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = genembed("Pro 2 | Zhongke Lanxun", "pro2zl")
+        embed1 = genembed("Maxes (Avalible in both Plastic & Aluminium Sprayed) | Zhongke Lanxun", "pro2zl")
         await interaction.response.send_message('zl', embed=embed1, ephemeral=True)
 
-    @discord.ui.button(label='Airoha 1562F', custom_id='1562F')
+    @discord.ui.button(label='Qualcommm', custom_id='qualcomm')
     async def on_button3(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = genembed("Pro 2 | Airoha 1562F", "pro21562f")
-        await interaction.response.send_message('1562F', embed=embed1, ephemeral=True)
+        embed1 = genembed("Maxes (Avalible in both Plastic & Aluminium Sprayed| Qualcomm", "maxesqualcomm")
+        await interaction.response.send_message('qualcomm', embed=embed1, ephemeral=True)
 
-    @discord.ui.button(label='Airoha 1562AE', custom_id='1562AE')
+    @discord.ui.button(label='Airoha 1562AE', custom_id='1561m')
     async def on_button3(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = genembed("Pro 2 | Airoha 1562AE", "pro21562ae")
-        await interaction.response.send_message('1562AE', embed=embed1, ephemeral=True)
+        embed1 = genembed("Maxes (Avalible in both Plastic & Aluminium Sprayed | Airoha 1561M", "maxes1561m")
+        await interaction.response.send_message('1561m', embed=embed1, ephemeral=True)
+
+class MetalMaxes(discord.ui.View):
+    def __init__(self):
+        super().__init__()
+
+    @discord.ui.button(label='JL', custom_id='JL')
+    async def on_button1(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = genembed("Maxes (Plastic) | JL", "maxesjl")
+        await interaction.response.send_message('JL', embed=embed1, ephemeral=True)
+
+    @discord.ui.button(label='Zhongke Lanxun', custom_id='zl')
+    async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = genembed("Maxes (Avalible in both Plastic & Aluminium Sprayed) | Zhongke Lanxun", "pro2zl")
+        await interaction.response.send_message('zl', embed=embed1, ephemeral=True)
+
+    @discord.ui.button(label='Qualcommm', custom_id='qualcomm')
+    async def on_button3(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = genembed("Maxes (Avalible in both Plastic & Aluminium Sprayed| Qualcomm", "maxesqualcomm")
+        await interaction.response.send_message('qualcomm', embed=embed1, ephemeral=True)
+
+    @discord.ui.button(label='Airoha 1562AE', custom_id='1561m')
+    async def on_button3(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = genembed("Maxes (Avalible in both Plastic & Aluminium Sprayed | Airoha 1561M", "maxes1561m")
+        await interaction.response.send_message('1561m', embed=embed1, ephemeral=True)

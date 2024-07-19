@@ -4,7 +4,7 @@
             "chipmodels": "v1.0 | UNKNOWN",
             "features": ["General Features + 3-4 Hour Battery Life)"],
             "price": "$N/A USD",  
-            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
 
         },
@@ -12,7 +12,7 @@
             "chipmodels": "v3.1U | Airoha 1562U",
             "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Improved Wireless Charging | App"],
             "price": "$N/AA USD",  
-            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
 
         },
@@ -20,57 +20,72 @@
             "chipmodels": "v3.1M | Airoha 1562E",
             "features": ["General Featues | 5-9 Hour Battery Life | Quick Switch | Improved Sound | Improved Build Quality | Improved Wireless Charging | App"],
             "price": "$N/AA USD",  
-            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
         "gen3jl": {
             "chipmodels": "v1.0 | UNKNOWN",
             "features": ["General Featues | 3-4 Hour Battery Life | Force Touch"],
             "price": "$N/AA USD",  
-            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
         "gen3a10": {
             "chipmodels": "v1.1 Huilian | Huilian A10",
             "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
             "price": "$N/AA USD",  
-            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
         "gen31562u": {
             "chipmodels": "v1.1U | Airoha 1562U",
             "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
             "price": "$N/AA USD",  
-            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
         "gen31562e": {
             "chipmodels": "v1.1E | Airoha 1562E",
             "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
             "price": "$N/AA USD",  
-            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
         "pro1jl": {
             "chipmodels": "v1.0 | UNKNOWN",
             "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
             "price": "$N/AA USD",  
-            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
         "pro1zl": {
             "chipmodels": "v4.0 | Zhongke Lanxun",
-            "features": ["General Featues | 4-5 Hour Battery Life | Improved Build Quality | Spatial Audio | Hybrid Active Noise Cancelling (22db*) | Transparency | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
+            "features": ["General Featues | 4-5 Hour Battery Life | Improved Build Quality | Spatial Audio | Hybrid Active Noise Cancelling (22db*) | Transparency | Improved Wireless Charging | Force Touch | MagSafe | App"],
             "price": "$N/AA USD",  
-            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
         "pro11562f": {
             "chipmodels": "v4.0F | Airoha 1562F",
-            "features": ["General Featues | 4-6 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Hybrid Active Noise Cancelling (22db*) | Transparency | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
+            "features": ["General Featues | 4-6 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Hybrid Active Noise Cancelling (22db*) | Transparency | Improved Wireless Charging | Force Touch | MagSafe | App"],
             "price": "$N/AA USD",  
-            "sellers": ["Jenny", "HiCity", "Dyson", "BXM"],
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
+        },
+        "pro11562a": {
+            "chipmodels": "v4.5A | Airoha 1562A",
+            "features": ["General Featues | 4-6 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Hybrid Active Noise Cancelling (25db*) | Transparency | Improved Wireless Charging | Force Touch | MagSafe | App"],
+            "price": "$N/AA USD",  
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
+            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
+        },
+        "pro11562ae": {
+            "chipmodels": "v4.6TB/HR | Airoha 1562AE",
+            "features": ["General Featues | 6-8 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Hybrid Active Noise Cancelling 33.6db* (TB) 34.2db* (HR) | Transparency | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
+            "price": "$N/AA USD",  
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
+            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
+
         }
 
     },
