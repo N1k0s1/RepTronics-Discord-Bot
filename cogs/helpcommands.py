@@ -12,94 +12,6 @@ class HelpCommands(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-
-    @discord.slash_command(name="gen2", description="Displays information about Geneation 2 AirPod Replicas!", guild_ids= id)
-    async def gen2info(self, ctx):
-        embed = discord.Embed(title="Gen 2", color=discord.Color.blue())
-        product = data['versions']['gen2']
-
-        embed.add_field(name="Chip Models", value=product['chipmodels'], inline=False)
-        embed.add_field(name="Features", value="\n".join(product['features']), inline=False) 
-        embed.add_field(name="Price", value=product['price'], inline=True)
-        embed.add_field(name="Notes", value=product['note'], inline=True)
-
-        # Add seller fields
-        for seller_name in product['sellers']:
-            seller = data['sellers'][seller_name]
-            embed.add_field(name=seller_name, value=seller['store_link'], inline=True)
-
-        await ctx.respond(embed=embed)
-
-    @discord.slash_command(name="gen3", description="Display information about Generation 3 AirPods", guild_id = id)
-    async def gen3info(self, ctx):
-        embed = discord.Embed(title="Gen 3", color=discord.Color.blue())
-        product = data['versions']['gen3']
-
-        embed.add_field(name="Chip Models", value=product['chipmodels'], inline=False)
-        embed.add_field(name="Features", value="\n".join(product['features']), inline=False) 
-        embed.add_field(name="Price", value=product['price'], inline=True)
-        embed.add_field(name="Notes", value=product['note'], inline=True)
-
-        # Add seller fields
-        for seller_name in product['sellers']:
-            seller = data['sellers'][seller_name]
-            embed.add_field(name=seller_name, value=seller['store_link'], inline=True)
-
-        await ctx.respond(embed=embed)
-
-    @discord.slash_command(name="pro1", description="Display information about Pro 1 AirPods", guild_id = id)
-    async def pro1info(self, ctx):
-        embed = discord.Embed(title="Pro 1", color=discord.Color.blue())
-        product = data['versions']['pro1']
-
-        embed.add_field(name="Chip Models", value=product['chipmodels'], inline=False)
-        embed.add_field(name="Features", value="\n".join(product['features']), inline=False) 
-        embed.add_field(name="Price", value=product['price'], inline=True)
-        embed.add_field(name="Notes", value=product['note'], inline=True)
-
-        # Add seller fields
-        for seller_name in product['sellers']:
-            seller = data['sellers'][seller_name]
-            embed.add_field(name=seller_name, value=seller['store_link'], inline=True)
-
-        await ctx.respond(embed=embed)
-
-    @discord.slash_command(name="pro2", description="Display information about Pro 2 AirPods", guild_id = id)
-    async def pro2info(self, ctx):
-        embed = discord.Embed(title="Pro 2", color=discord.Color.blue())
-        product = data['versions']['pro2']
-
-        embed.add_field(name="Chip Models", value=product['chipmodels'], inline=False)
-        embed.add_field(name="Features", value="\n".join(product['features']), inline=False) 
-        embed.add_field(name="Price", value=product['price'], inline=True)
-        embed.add_field(name="Notes", value=product['note'], inline=True)
-
-        # Add seller fields
-        for seller_name in product['sellers']:
-            seller = data['sellers'][seller_name]
-            embed.add_field(name=seller_name, value=seller['store_link'], inline=True)
-
-        await ctx.respond(embed=embed)
-
-    @discord.slash_command(name="maxes", description="Display information about AirPod Maxes", guild_id = id)
-    async def maxesinfo(self, ctx):
-        embed = discord.Embed(title="Maxes", color=discord.Color.blue())
-        product = data['versions']['maxes']
-
-        embed.add_field(name="Chip Models", value=product['chipmodels'], inline=False)
-        embed.add_field(name="Features", value="\n".join(product['features']), inline=False) 
-        embed.add_field(name="Price", value=product['price'], inline=True)
-        embed.add_field(name="Notes", value=product['note'], inline=True)
-
-        # Add seller fields
-        for seller_name in product['sellers']:
-            seller = data['sellers'][seller_name]
-            embed.add_field(name=seller_name, value=seller['store_link'], inline=True)
-
-        await ctx.respond(embed=embed)
-
-
-
     @discord.slash_command(name="hicity", description="Information about HiCity", guild_id = id)
     async def hicityinfo(self, ctx):
         embed = discord.Embed(title="HiCity", color=discord.Color.blue())
@@ -175,21 +87,15 @@ class HelpCommands(commands.Cog):
         embed.add_field(name="Discord", value=seller['discord'], inline=False)
         embed.add_field(name="Website", value=seller['store_link'], inline=False)
 
+    @discord.slash_command(name="york", description="Information for York", guild_id = id)
+    async def bxminfo(self, ctx):
+        embed = discord.Embed(title="BXM", color=discord.Color.blue())
+        seller = data['sellers']['BXM']
+
+        embed.add_field(name="WhatsApp", value=seller['whatsapp'], inline=False)
+        embed.add_field(name="Discord", value=seller['discord'], inline=False)
+        embed.add_field(name="Website", value=seller['store_link'], inline=False)
         await ctx.respond(embed=embed)
         
-# TESTING SECTION
-class MyView(discord.ui.View):
-    @discord.ui.button(label="Click me!", style=discord.ButtonStyle.primary, emoji="😎")
-    async def button_callback(self, button, interaction):
-        await interaction.response.send_message("You clicked the button!")\
-            
-    @discord.slash_command(name="testingbutton", description= "Uses a button of the users choosing", guild_id = id)
-    async def testingbutton(self, ctx):
-        await ctx.respond("This is a button!", view=MyView())
-
-    @discord.slash_command(name="goodbye", description="Says Goodbye!", guild_ids= id)
-    async def goodbye(self, ctx):
-        await ctx.respond('Goodbye!')
-
 def setup(bot):
     bot.add_cog(HelpCommands(bot))
