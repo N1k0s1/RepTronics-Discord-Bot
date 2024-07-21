@@ -135,7 +135,7 @@
             "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
-        "pro2jlunkown": {
+        "pro2jl": {
             "chipmodels": "v1 JL | Unkown",
             "features": ["General Features | 3-4 hours battery life | Force Touch"],
             "price": "$N/AA USD",  

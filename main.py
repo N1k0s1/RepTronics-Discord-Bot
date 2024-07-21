@@ -3,12 +3,20 @@ import discord
 bot = discord.Bot()
 #Testing
 import json 
+import asyncio
 with open('data.json') as f:
     data = json.load(f)
 from embedbuttons import Gen2View, Gen3View, Pro1View, Pro2View, MaxesView
+from discord.ext import tasks
+
+@tasks.loop()
+async def status_task() -> None:
+    await bot.change_presence(status="Reading the Ultimate Guide", activity=discord.Streaming(name="Ultimate Guide", url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"))
+    await asyncio.sleep(60)
 
 @bot.event
 async def on_ready():
+    status_task.start()
     print(f"We have logged in as {bot.user}")
     await bot.sync_commands()
     print(f"Succesfully synced commands")
@@ -31,6 +39,10 @@ async def cogs(ctx, cogs):
         await ctx.respond("Cog not found")
 #    elif:
 
+@bot.slash_command(name="quiz", description="Sends link to quiz", guild_id = id)
+async def quiz(ctx):
+    await ctx.respond("https://weare.reptronics.top/category/quiz/")
+
 @bot.slash_command(guild_id = id)
 async def ping(ctx):
     await ctx.respond(f"Pong! ({bot.latency*1000}ms)")
@@ -40,21 +52,7 @@ async def sync(ctx):
     await bot.sync_commands()
     await ctx.respond(f"Succesfully synced commands")
 
-# TESTING!!!
-
-class MyView(discord.ui.View):
-    @discord.ui.button(label="Click me!", style=discord.ButtonStyle.primary, emoji="😎")
-    async def button_callback(self, button, interaction):
-        await interaction.response.send_message("You clicked the button!")
-
-@bot.slash_command(name="button", description= "Uses a button of the users choosing", guild_id = id)
-async def button(ctx):
-    await ctx.respond("This is a button!", view=MyView())
-
-
-
-
-
+# COMMANDS FOR THE CHIP MENU
 
 @bot.slash_command(name="gen2", description="Show the gen 2 menu", guild_id = id)
 async def gen2test(ctx):
@@ -74,7 +72,7 @@ async def gen2test(ctx):
 
 @bot.slash_command(name="maxes", description="Show the maxes menu", guild_id = id)
 async def gen2test(ctx):
-    await ctx.respond('Maxes chips - Choose an option:', view=MaxesView())
+    await ctx.respond('Maxes Models - Choose an option:', view=MaxesView())
 
 
-bot.run(')
+bot.run('')

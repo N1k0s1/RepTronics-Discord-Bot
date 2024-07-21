@@ -96,10 +96,10 @@ class Pro2View(discord.ui.View):
         embed1 = genembed("Pro 2 | Bluetrum", "pro2bluetrum")
         await interaction.response.send_message('bl', embed=embed1, ephemeral=True)
 
-    @discord.ui.button(label='BES', custom_id='bes')
+    @discord.ui.button(label='Airoha 1562AE (HR)', custom_id='hr')
     async def on_button3(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = genembed("Pro 2 | BES", "pro2bes")
-        await interaction.response.send_message('bes', embed=embed1, ephemeral=True)
+        embed1 = genembed("Pro 2 | BES", "pro21562aeh")
+        await interaction.response.send_message('hr', embed=embed1, ephemeral=True)
 
     @discord.ui.button(label='HS2', custom_id='hs2')
     async def on_button4(self, button: discord.ui.Button, interaction: discord.Interaction):
