@@ -86,19 +86,21 @@
             "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
-        "pro2hs2ultra": {
-            "chipmodels": "v1.2 Huilian | Huilian 277",
-            "features": ["General Features | 4-6 hours battery life | Improved Sound | Improved Build Quality | Improved Wireless Charging | MagSafe | Hybrid Active Noise Cancelling (30db*) | Transparency | Force Touch | Special Audio | Quick Switch | USB-C | Case Speaker | App"],
-            "price": "$N/AA USD",  
-            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
-            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
-        },
+
         "pro21562aetb": {
             "chipmodels": "v1.1 TB | Airoha 1562AE",
             "features": ["General Features | 6-8 hours battery life | Improved Sound | Improved Build Quality | Improved Wireless Charging | MagSafe | Hybrid Active Noise Cancelling (33.6db*) | Transparency | Force Touch | Special Audio | Quick Switch | USB-C/lightning | Case Speaker | App"],
             "price": "$N/AA USD",  
             "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
+            },
+        "pro2hs2ultra": {
+            "chipmodels": "v1.2 Huilian | Huilian 277",
+            "features": ["General Features | 4-6 hours battery life | Improved Sound | Improved Build Quality | Improved Wireless Charging | MagSafe | Hybrid Active Noise Cancelling (30db*) | Transparency | Force Touch | Special Audio | Quick Switch | USB-C | Case Speaker | App"],
+            "price": "$N/AA USD",  
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
+            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
+
         },
         "pro21562aehr": {
             "chipmodels": "v1.1 HR | Airoha 1562HR",
@@ -139,6 +141,35 @@
             "chipmodels": "v1 JL | Unkown",
             "features": ["General Features | 3-4 hours battery life | Force Touch"],
             "price": "$N/AA USD",  
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
+            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
+        },
+
+        "maxjlplastic": {
+            "chipmodel": "JL",
+            "features": "General Features, 15-50 hours battery life, Improved Sound, Hybrid Active Noise Cancelling (25db), Transparency, Special Audio, Plastic Cups, App",
+            "price": "$N/A USD",
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
+            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
+        },
+        "maxzlplastic": {
+            "chipmodel": "Zhongke Lanxun",
+            "features": "General Features, 15-50 hours battery life, Improved Sound, Hybrid Active Noise Cancelling (25db), Transparency, Special Audio, Plastic Cups, App",
+            "price": "$N/A USD",
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
+            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
+        },
+        "maxqualcommplastic": {
+            "chipmodel": "Qualcomm",
+            "features": "General Features, 15-50 hours battery life, Improved Sound, Hybrid Active Noise Cancelling (25db), Transparency, Special Audio, Plastic Cups, App",
+            "price": "$N/A USD",
+            "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
+            "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
+        },
+        "AirpodsMaxAiroha1561MPlastic": {
+            "chipmodel": "Airoha 1561M",
+            "features": "General Features, 15-50 hours battery life, Improved Sound, Hybrid Active Noise Cancelling (25db), Transparency, Special Audio, Plastic Cups, App",
+            "price": "$N/A USD",
             "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         }
