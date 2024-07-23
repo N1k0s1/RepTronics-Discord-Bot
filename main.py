@@ -1,17 +1,13 @@
 id = [1261831251254317066]
 import discord
 bot = discord.Bot()
-#Testing
-import json 
 import asyncio
-with open('data.json') as f:
-    data = json.load(f)
 from embedbuttons import Gen2View, Gen3View, Pro1View, Pro2View, MaxesView
 from discord.ext import tasks
 
 @tasks.loop()
 async def status_task() -> None:
-    await bot.change_presence(status="Reading the Ultimate Guide", activity=discord.Streaming(name="Ultimate Guide", url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"))
+    await bot.change_presence(status="Reading the Ultimate Guide", activity=discord.Streaming(name="Ultimate Guide", url="https://weare.reptronics.top/blog/"))
     await asyncio.sleep(60)
 
 @bot.event
@@ -55,24 +51,55 @@ async def sync(ctx):
 # COMMANDS FOR THE CHIP MENU
 
 @bot.slash_command(name="gen2", description="Show the gen 2 menu", guild_id = id)
-async def gen2test(ctx):
+async def gen2(ctx):
     await ctx.respond('Gen 2 chips - Choose an option:', view=Gen2View())
 
 @bot.slash_command(name="gen3", description="Show the gen 3 menu", guild_id = id)
-async def gen2test(ctx):
+async def gen3(ctx):
     await ctx.respond('Gen 3 chips - Choose an option:', view=Gen3View())
 
 @bot.slash_command(name="pro1", description="Show the pro 1 menu", guild_id = id)
-async def gen2test(ctx):
+async def pro1(ctx):
     await ctx.respond('Pro 1 chips - Choose an option:', view=Pro1View())
 
 @bot.slash_command(name="pro2", description="Show the pro 2 menu", guild_id = id)
-async def gen2test(ctx):
+async def pro2(ctx):
     await ctx.respond('Pro 2 chips - Choose an option:', view=Pro2View())
 
 @bot.slash_command(name="maxes", description="Show the maxes menu", guild_id = id)
-async def gen2test(ctx):
+async def maxes(ctx):
     await ctx.respond('Maxes Models - Choose an option:', view=MaxesView())
 
+@bot.slash_command(name="ts", description="Send a feedback survey DM to a user")
+async def send_survey(ctx, user: discord.Member):
+    survey_message = f"""
+Hi {user.display_name} 👋,
 
-bot.run('')
+We hope you're happy with the solution of your recent support ticket.
+
+We're always looking for ways to improve our service, and your feedback is invaluable to us.
+
+Please take a few minutes to complete our short survey and let us know how we did:
+
+[Survey Link](https://weare.reptronics.top/after-sales-service-survey/)
+
+Your feedback will help us to:
+
+- Understand your satisfaction with our support team
+- Identify areas where we can improve
+- Continue to provide you with the best possible service
+
+Thank you for your time!
+
+Sincerely,
+
+The RepTronics Team
+
+P.S.
+
+Your responses will be kept confidential and used for internal purposes only.
+"""
+    await user.send(survey_message)
+    await ctx.respond(f"Survey sent to {user.display_name}", ephemeral=True)
+
+bot.run('TOKEN')
