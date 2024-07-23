@@ -73,7 +73,7 @@ async def maxes(ctx):
 @bot.slash_command(name="ts", description="Send a feedback survey DM to a user")
 async def send_survey(ctx, user: discord.Member):
     survey_message = f"""
-Hi {user.display_name} 👋,
+Hi {user.mention} 👋,
 
 We hope you're happy with the solution of your recent support ticket.
 
@@ -100,6 +100,6 @@ P.S.
 Your responses will be kept confidential and used for internal purposes only.
 """
     await user.send(survey_message)
-    await ctx.respond(f"Survey sent to {user.display_name}", ephemeral=True)
+    await ctx.respond(f"Survey sent to {user.display_name}")
 
-bot.run('TOKEN')
+bot.run(')

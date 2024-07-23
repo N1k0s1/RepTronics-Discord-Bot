@@ -188,3 +188,23 @@ class MetalMaxes(discord.ui.View):
     async def on_button5(self, button: discord.ui.Button, interaction: discord.Interaction):
         embed1 = genembed("Maxes | Realtek 8763ESE", "maxesrt")
         await interaction.response.send_message('Realtek 8763ESE', embed=embed1, ephemeral=True)
+
+# SELLERS
+class SellersView(discord.ui.View):
+    def __init__(self):
+        super().__init__()
+
+    @discord.ui.button(label='HiCity', custom_id='hicity')
+    async def on_button1(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = sellerembed("HiCity", "hicity")
+        await interaction.response.send_message('HiCity', embed=embed1, ephemeral=True)
+
+    @discord.ui.button(label='Dyson', custom_id='dyson')
+    async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = sellerembed("Dyson", "dyson")
+        await interaction.response.send_message('Dyson', embed=embed1, ephemeral=True)
+
+    @discord.ui.button(label='Sam', custom_id='sam')
+    async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = sellerembed("Sam", "sam")
+        await interaction.response.send_message('Sam', embed=embed1, ephemeral=True)

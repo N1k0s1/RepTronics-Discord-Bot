@@ -2,17 +2,17 @@ id = [1261831251254317066]
 
 import discord
 from discord.ext import commands
-import json
-
-with open('data.json') as f:
-    data = json.load(f)
+from embedbuttons import SellersView
 
 class HelpCommands(commands.Cog):
     
     def __init__(self, bot):
         self.bot = bot
+    @discord.slash_command(name="sellers", description="Information about sellers", guild_id = id)
+    async def sellers(self, ctx):
+        await ctx.respond('Sellers: Choose an option.', view=SellersView())
 
-    @discord.slash_command(name="hicity", description="Information about HiCity", guild_id = id)
+'''    @discord.slash_command(name="hicity", description="Information about HiCity", guild_id = id)
     async def hicityinfo(self, ctx):
         embed = discord.Embed(title="HiCity", color=discord.Color.blue())
         seller = data['sellers']['HiCity']
@@ -95,7 +95,7 @@ class HelpCommands(commands.Cog):
         embed.add_field(name="WhatsApp", value=seller['whatsapp'], inline=False)
         embed.add_field(name="Discord", value=seller['discord'], inline=False)
         embed.add_field(name="Website", value=seller['store_link'], inline=False)
-        await ctx.respond(embed=embed)
+        await ctx.respond(embed=embed)'''
         
 def setup(bot):
     bot.add_cog(HelpCommands(bot))
