@@ -141,6 +141,11 @@ class MaxesView(discord.ui.View):
         plastic_maxes_view = PlasticMaxes()
         await interaction.response.send_message('Plastic Maxes', view=plastic_maxes_view, ephemeral=True)
 
+    @discord.ui.button(label='Aluminium Sprayed Maxes', custom_id='aluminiummaxes')
+    async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
+        aluminium_maxes_view = AluminiumMaxes()
+        await interaction.response.send_message('Aluminium Sprayed Maxes', view=aluminium_maxes_view, ephemeral=True)    
+
 
 class PlasticMaxes(discord.ui.View):
     def __init__(self):
@@ -174,6 +179,25 @@ class MetalMaxes(discord.ui.View):
     async def on_button1(self, button: discord.ui.Button, interaction: discord.Interaction):
         embed1 = genembed("Maxes (Plastic) | JL", "maxesjl")
         await interaction.response.send_message('JL', embed=embed1, ephemeral=True)
+
+    @discord.ui.button(label='Zhongke Lanxun', custom_id='zl')
+    async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = genembed("Maxes (Avalible in both Plastic & Aluminium Sprayed) | Zhongke Lanxun", "pro2zl")
+        await interaction.response.send_message('zl', embed=embed1, ephemeral=True)
+
+    @discord.ui.button(label='Qualcommm', custom_id='qualcomm')
+    async def on_button3(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = genembed("Maxes (Avalible in both Plastic & Aluminium Sprayed| Qualcomm", "maxesqualcomm")
+        await interaction.response.send_message('qualcomm', embed=embed1, ephemeral=True)
+
+    @discord.ui.button(label='Airoha 1561M', custom_id='1561m')
+    async def on_button3(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = genembed("Maxes (Avalible in both Plastic & Aluminium Sprayed | Airoha 1561M", "maxes1561m")
+        await interaction.response.send_message('1561m', embed=embed1, ephemeral=True)
+
+class AluminiumMaxes(discord.ui.View):
+    def __init__(self):
+        super().__init__()
 
     @discord.ui.button(label='Zhongke Lanxun', custom_id='zl')
     async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
