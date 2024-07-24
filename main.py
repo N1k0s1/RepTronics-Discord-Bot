@@ -2,7 +2,7 @@ id = [1261831251254317066]
 import discord
 bot = discord.Bot()
 import asyncio
-from embedbuttons import Gen2View, Gen3View, Pro1View, Pro2View, MaxesView
+from embedbuttons import Gen2View, Gen3View, Pro1View, Pro2View, MaxesView, SellersView
 from discord.ext import tasks
 
 @tasks.loop()
@@ -70,6 +70,11 @@ async def pro2(ctx):
 async def maxes(ctx):
     await ctx.respond('Maxes Models - Choose an option:', view=MaxesView())
 
+# COMMAND FOR SELLERS
+@bot.slash_command(name="sellers", description="Information about sellers", guild_id = id)
+async def sellers(ctx):
+    await ctx.respond('Sellers: Choose an option.', view=SellersView())
+
 @bot.slash_command(name="ts", description="Send a feedback survey DM to a user")
 async def send_survey(ctx, user: discord.Member):
     survey_message = f"""
@@ -77,7 +82,7 @@ Hi {user.mention} 👋,
 
 We hope you're happy with the solution of your recent support ticket.
 
-We're always looking for ways to improve our service, and your feedback is invaluable to us.
+We're always looking for ways to improve our service, and your feedback is extremely valuable to us.
 
 Please take a few minutes to complete our short survey and let us know how we did:
 
@@ -102,4 +107,4 @@ Your responses will be kept confidential and used for internal purposes only.
     await user.send(survey_message)
     await ctx.respond(f"Survey sent to {user.display_name}")
 
-bot.run(')
+bot.run('')

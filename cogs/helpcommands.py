@@ -3,14 +3,18 @@ id = [1261831251254317066]
 import discord
 from discord.ext import commands
 from embedbuttons import SellersView
+from embed import sellerembed
 
 class HelpCommands(commands.Cog):
     
     def __init__(self, bot):
         self.bot = bot
-    @discord.slash_command(name="sellers", description="Information about sellers", guild_id = id)
-    async def sellers(self, ctx):
-        await ctx.respond('Sellers: Choose an option.', view=SellersView())
+
+
+    @discord.slash_command(label="Sam", description="Information about Sam", guild_id = id)
+    async def sam(self, ctx):
+        embed1 = sellerembed("Sam", "sam")
+        await ctx.respond(embed=embed1)
 
 '''    @discord.slash_command(name="hicity", description="Information about HiCity", guild_id = id)
     async def hicityinfo(self, ctx):

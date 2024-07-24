@@ -194,17 +194,37 @@ class SellersView(discord.ui.View):
     def __init__(self):
         super().__init__()
 
+    @discord.ui.button(label='JDFoot', custom_id='JDFoot')
+    async def on_button1(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = sellerembed("JDFoot", "jdfoot")
+        await interaction.response.send_message('JDFoot', embed=embed1, ephemeral=True)
+
     @discord.ui.button(label='HiCity', custom_id='hicity')
     async def on_button1(self, button: discord.ui.Button, interaction: discord.Interaction):
         embed1 = sellerembed("HiCity", "hicity")
         await interaction.response.send_message('HiCity', embed=embed1, ephemeral=True)
+
+    @discord.ui.button(label='Jenny', custom_id='Jenny')
+    async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = sellerembed("Jenny", "Jenny")
+        await interaction.response.send_message('Jenny', embed=embed1, ephemeral=True)
 
     @discord.ui.button(label='Dyson', custom_id='dyson')
     async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
         embed1 = sellerembed("Dyson", "dyson")
         await interaction.response.send_message('Dyson', embed=embed1, ephemeral=True)
 
-    @discord.ui.button(label='Sam', custom_id='sam')
+    @discord.ui.button(label='Mike-YM', custom_id='Mike-YM')
     async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = sellerembed("Sam", "sam")
-        await interaction.response.send_message('Sam', embed=embed1, ephemeral=True)
+        embed1 = sellerembed("Mike-YM", "Mike-YM")
+        await interaction.response.send_message('Mike-YM', embed=embed1, ephemeral=True)
+
+    @discord.ui.button(label='Beschan', custom_id='Beschan')
+    async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = sellerembed("Beschan", "Beschan")
+        await interaction.response.send_message('Beschan', embed=embed1, ephemeral=True)
+
+    @discord.ui.button(label='York', custom_id='York')
+    async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = sellerembed("York", "York")
+        await interaction.response.send_message('York', embed=embed1, ephemeral=True)
