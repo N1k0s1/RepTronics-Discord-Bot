@@ -11,7 +11,7 @@ class HelpCommands(commands.Cog):
         self.bot = bot
 
 
-    @discord.slash_command(label="Sam", description="Information about Sam", guild_id = id)
+    @discord.slash_command(name="hicity", description="Information about HiCity", guild_id = id)
     async def sam(self, ctx):
         embed1 = sellerembed("Sam", "sam")
         await ctx.respond(embed=embed1)

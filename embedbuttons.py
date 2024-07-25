@@ -196,50 +196,50 @@ class SellersView(discord.ui.View):
 
     @discord.ui.button(label='JDFoot', custom_id='JDFoot')
     async def on_button1(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = sellerembed("JDFoot")        
-        await interaction.response.send_message('JDFoot', embed=embed1, ephemeral=True)
+        embed = sellerembed("JDFoot", "JDFoot")        
+        await interaction.response.send_message('JDFoot', embed=embed)
 
     @discord.ui.button(label='HiCity', custom_id='hicity')
     async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = sellerembed("HiCity", "hicity")
-        await interaction.response.send_message('HiCity', embed=embed1, ephemeral=True)
+        embed = sellerembed("HiCity", "HiCity")
+        await interaction.response.send_message('HiCity', embed=embed)
 
     @discord.ui.button(label='Jenny', custom_id='Jenny')
     async def on_button3(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = sellerembed("Jenny", "Jenny")
-        await interaction.response.send_message('Jenny', embed=embed1, ephemeral=True)
+        embed = sellerembed("Jenny", "Jenny")
+        await interaction.response.send_message('Jenny', embed=embed)
 
     @discord.ui.button(label='Dyson', custom_id='dyson')
     async def on_button4(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = sellerembed("Dyson", "dyson")
-        await interaction.response.send_message('Dyson', embed=embed1, ephemeral=True)
+        embed = sellerembed("Dyson", "Dyson")
+        await interaction.response.send_message(embed=embed)
 
     @discord.ui.button(label='Mike-YM', custom_id='Mike-YM')
     async def on_button5(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = sellerembed("Mike-YM", "Mike-YM")
-        await interaction.response.send_message('Mike-YM', embed=embed1, ephemeral=True)
+        embed = sellerembed("Mike-YM", "Mike-YM")
+        await interaction.response.send_message('Mike-YM', embed=embed)
 
     @discord.ui.button(label='Beschan', custom_id='Beschan')
     async def on_button6(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = sellerembed("Beschan", "Beschan")
-        await interaction.response.send_message('Beschan', embed=embed1, ephemeral=True)
+        embed = sellerembed("Beschan", "Beschan")
+        await interaction.response.send_message('Beschan', embed=embed)
 
     @discord.ui.button(label='York', custom_id='York')
     async def on_button7(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = sellerembed("York", "York")
-        await interaction.response.send_message('York', embed=embed1, ephemeral=True)
+        embed = sellerembed("York", "York")
+        await interaction.response.send_message('York', embed=embed)
 
     @discord.ui.button(label='Criss', custom_id='Criss')
     async def on_button8(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = sellerembed("Criss", "Criss")
-        await interaction.response.send_message('Criss', embed=embed1, ephemeral=True)
+        embed = sellerembed("Criss", "Criss")
+        await interaction.response.send_message('Criss', embed=embed)
 
     @discord.ui.button(label='Sam', custom_id='Sam')
     async def on_button9(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = sellerembed("Sam", "Sam")
-        await interaction.response.send_message('Sam', embed=embed1, ephemeral=True)
+        embed = sellerembed("Sam", "Sam")
+        await interaction.response.send_message('Sam', embed=embed)
 
-    @discord.ui.button(label='BXM', custom_id='BXM')
+    @discord.ui.button(label='BXM/Sunfler', custom_id='BXM/Sunfler')
     async def on_button10(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = sellerembed("BXM", "BXM")
-        await interaction.response.send_message('BXM', embed=embed1, ephemeral=True)
+        embed = sellerembed("BXM/Sunfler", "BXM/Sunfler")
+        await interaction.response.send_message('BXM/Sunfler', embed=embed)

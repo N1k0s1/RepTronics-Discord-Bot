@@ -20,7 +20,7 @@ def genembed(title, version):
         return embed1
 
 def sellerembed(title, seller):
-        embed = discord.Embed(title, color=discord.Color.blue())
+        embed = discord.Embed(title=title, color=discord.Color.blue())
         seller = data['sellers'][seller]
 
         embed.add_field(name="WhatsApp", value=seller['whatsapp'], inline=False)
