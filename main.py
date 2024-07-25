@@ -36,7 +36,6 @@ async def cogs(ctx, cogs):
         await ctx.respond(f"Successfully loaded {cogs}")
     else:
         await ctx.respond("Cog not found")
-#    elif:
         
 @bot.slash_command(name='unloadcog', description= "Unloads a cog of the users choosing", guild_id = id)
 async def unload(ctx, *, cog: str):
@@ -115,15 +114,18 @@ async def sellers(ctx):
     else:
         await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
     
-@bot.slash_command(name='ts', description='Sends the user a survey', guild_id = id)
+@bot.slash_command(name='ts', description='Sends the user a survey', guild_id=id)
 async def send_survey(ctx, user: discord.Member):
-    survey_data = data['misc']['survey_message']
-    embed = discord.Embed(
-        title=survey_data['title'],
-        description=survey_data['description'].replace('[user_mention]', user.mention),
-        color=discord.Color.blue()
-    )
-    await user.send(embed=embed)
-    await ctx.send(f"Survey sent to {user.display_name}.")
+    if ctx.author.id in allowed_users:
+        survey_data = data['misc']['survey_message']
+        embed = discord.Embed(
+            title=survey_data['title'],
+            description=survey_data['description'].replace('[user_mention]', user.mention),
+            color=discord.Color.blue()
+        )
+        await user.send(embed=embed)
+        await ctx.respond(f"Survey sent to {user.display_name}.")
+    else:
+        await ctx.respond("You do not have permission to use this command.", ephemeral=True)
 
 bot.run(bot_token)
