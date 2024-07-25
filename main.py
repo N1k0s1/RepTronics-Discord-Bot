@@ -1,9 +1,13 @@
 id = [1261831251254317066]
+allowed_users = [1136290556591485039, 978886408964026378]
 import discord
 bot = discord.Bot()
 import asyncio
 from embedbuttons import Gen2View, Gen3View, Pro1View, Pro2View, MaxesView, SellersView
 from discord.ext import tasks
+import json 
+with open('data.json') as f:
+    data = json.load(f)
 
 @tasks.loop()
 async def status_task() -> None:
@@ -44,9 +48,12 @@ async def ping(ctx):
     await ctx.respond(f"Pong! ({bot.latency*1000}ms)")
 
 @bot.slash_command(guild_id = id)
-async def sync(ctx): 
-    await bot.sync_commands()
-    await ctx.respond(f"Succesfully synced commands")
+async def sync(ctx):
+    if ctx.author.id in allowed_users:
+        await bot.sync_commands()
+        await ctx.respond("Successfully synced commands")
+    else:
+        await ctx.respond("You do not have permission to use this command.")
 
 # COMMANDS FOR THE CHIP MENU
 
@@ -75,36 +82,15 @@ async def maxes(ctx):
 async def sellers(ctx):
     await ctx.respond('Sellers: Choose an option.', view=SellersView())
 
-@bot.slash_command(name="ts", description="Send a feedback survey DM to a user")
+@bot.slash_command(name='ts', description='Sends the user a survey', guild_id = id)
 async def send_survey(ctx, user: discord.Member):
-    survey_message = f"""
-Hi {user.mention} 👋,
-
-We hope you're happy with the solution of your recent support ticket.
-
-We're always looking for ways to improve our service, and your feedback is extremely valuable to us.
-
-Please take a few minutes to complete our short survey and let us know how we did:
-
-[Survey Link](https://weare.reptronics.top/after-sales-service-survey/)
-
-Your feedback will help us to:
-
-- Understand your satisfaction with our support team
-- Identify areas where we can improve
-- Continue to provide you with the best possible service
-
-Thank you for your time!
-
-Sincerely,
-
-The RepTronics Team
-
-P.S.
-
-Your responses will be kept confidential and used for internal purposes only.
-"""
-    await user.send(survey_message)
-    await ctx.respond(f"Survey sent to {user.display_name}")
+    survey_data = data['misc']['survey_message']
+    embed = discord.Embed(
+        title=survey_data['title'],
+        description=survey_data['description'].replace('[user_mention]', user.mention),
+        color=discord.Color.blue()
+    )
+    await user.send(embed=embed)
+    await ctx.send(f"Survey sent to {user.display_name}.")
 
 bot.run('')
