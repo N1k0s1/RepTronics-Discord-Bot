@@ -1,5 +1,6 @@
 id = [1261831251254317066]
 allowed_users = [1136290556591485039, 978886408964026378]
+allowed_channel_id = 1263491691638292521
 import discord
 from discord.ext import commands
 import os
@@ -48,11 +49,14 @@ async def unload(ctx, *, cog: str):
         except Exception as e:
             await ctx.send(f"Error while unloading cog: {cog}\n{e}")
     else:
-        await ctx.send("You do not have permission to use this command.")
+        await ctx.send("You do not have permission to use this command.", ephemeral=True)
 
-@bot.slash_command(name="quiz", description="Sends link to quiz", guild_id = id)
+@bot.slash_command(name="quiz", description="Sends link to quiz", guild_id=id)
 async def quiz(ctx):
-    await ctx.respond("https://weare.reptronics.top/category/quiz/")
+    if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
+        await ctx.respond("https://weare.reptronics.top/category/quiz/")
+    else:
+        await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
 
 @bot.slash_command(guild_id = id)
 async def ping(ctx):
@@ -64,35 +68,53 @@ async def sync(ctx):
         await bot.sync_commands()
         await ctx.respond("Successfully synced commands")
     else:
-        await ctx.respond("You do not have permission to use this command.")
+        await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
 
 # COMMANDS FOR THE CHIP MENU
 
 @bot.slash_command(name="gen2", description="Show the gen 2 menu", guild_id = id)
 async def gen2(ctx):
-    await ctx.respond('Gen 2 chips - Choose an option:', view=Gen2View())
-
+    if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
+        await ctx.respond('Gen 2 chips - Choose an option:', view=Gen2View())
+    else:
+        await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
+    
 @bot.slash_command(name="gen3", description="Show the gen 3 menu", guild_id = id)
 async def gen3(ctx):
-    await ctx.respond('Gen 3 chips - Choose an option:', view=Gen3View())
-
+    if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
+        await ctx.respond('Gen 3 chips - Choose an option:', view=Gen3View())
+    else:
+        await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
+    
 @bot.slash_command(name="pro1", description="Show the pro 1 menu", guild_id = id)
 async def pro1(ctx):
-    await ctx.respond('Pro 1 chips - Choose an option:', view=Pro1View())
-
+    if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
+        await ctx.respond('Pro 1 chips - Choose an option:', view=Pro1View())
+    else:
+        await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
+    
 @bot.slash_command(name="pro2", description="Show the pro 2 menu", guild_id = id)
 async def pro2(ctx):
-    await ctx.respond('Pro 2 chips - Choose an option:', view=Pro2View())
-
+    if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
+        await ctx.respond('Pro 2 chips - Choose an option:', view=Pro2View())
+    else:
+        await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
+    
 @bot.slash_command(name="maxes", description="Show the maxes menu", guild_id = id)
 async def maxes(ctx):
-    await ctx.respond('Maxes Models - Choose an option:', view=MaxesView())
-
+    if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
+        await ctx.respond('Maxes Models - Choose an option:', view=MaxesView())
+    else:
+        await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
+    
 # COMMAND FOR SELLERS
 @bot.slash_command(name="sellers", description="Information about sellers", guild_id = id)
 async def sellers(ctx):
-    await ctx.respond('Sellers: Choose an option.', view=SellersView())
-
+    if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
+        await ctx.respond('Sellers: Choose an option.', view=SellersView())
+    else:
+        await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
+    
 @bot.slash_command(name='ts', description='Sends the user a survey', guild_id = id)
 async def send_survey(ctx, user: discord.Member):
     survey_data = data['misc']['survey_message']
