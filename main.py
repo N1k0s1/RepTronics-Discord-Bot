@@ -2,12 +2,17 @@ id = [1261831251254317066]
 allowed_users = [1136290556591485039, 978886408964026378]
 import discord
 from discord.ext import commands
-
+import os
 bot = commands.Bot()
 import asyncio
 from embedbuttons import Gen2View, Gen3View, Pro1View, Pro2View, MaxesView, SellersView
 from discord.ext import tasks
 import json 
+# BOT TOKEN
+from dotenv import load_dotenv
+load_dotenv("token.env")
+bot_token = os.getenv("DISCORD_BOT_TOKEN")
+
 with open('data.json') as f:
     data = json.load(f)
 
@@ -99,4 +104,4 @@ async def send_survey(ctx, user: discord.Member):
     await user.send(embed=embed)
     await ctx.send(f"Survey sent to {user.display_name}.")
 
-bot.run('')
+bot.run(bot_token)

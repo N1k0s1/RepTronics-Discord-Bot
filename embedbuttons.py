@@ -42,7 +42,7 @@ class Gen3View(discord.ui.View):
     @discord.ui.button(label='Airoha 1562E', custom_id='1562E')
     async def on_button3(self, button: discord.ui.Button, interaction: discord.Interaction):
         embed1 = genembed("Gen 3 | Airoha 1562E", "gen31562e")
-        await interaction.response.send_message(mbed=embed1)
+        await interaction.response.send_message(embed=embed1)
 
     @discord.ui.button(label='Huilian A10', custom_id='a10')
     async def on_button4(self, button: discord.ui.Button, interaction: discord.Interaction):
