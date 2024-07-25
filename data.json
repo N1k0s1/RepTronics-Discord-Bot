@@ -181,21 +181,21 @@
         },
         "maxesqualcomm": {
             "chipmodels": "Qualcomm",
-            "features": "General Features, 15-50 hours battery life, Improved Sound, Hybrid Active Noise Cancelling (25db), Transparency, Special Audio, Metal Cups, App",
+            "features": ["General Features, 15-50 hours battery life, Improved Sound, Hybrid Active Noise Cancelling (25db), Transparency, Special Audio, Metal Cups, App"],
             "price": "$N/A USD",
             "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
         "maxes1561m": {
             "chipmodels": "Airoha 1561M",
-            "features": "General Features, 15-50 hours battery life, Improved Sound, Hybrid Active Noise Cancelling (25db), Transparency, Special Audio, Metal Cups, App",
+            "features": ["General Features, 15-50 hours battery life, Improved Sound, Hybrid Active Noise Cancelling (25db), Transparency, Special Audio, Metal Cups, App"],
             "price": "$N/A USD",
             "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
         "maxesrt": {
             "chipmodels": "Realtek 8763ESE",
-            "features": "General Features, 15-50 hours battery life, Improved Sound, Hybrid Active Noise Cancelling (25db), Transparency, Special Audio, Metal Cups, App  (NOT CONFIRMED, UNKNOWN)",
+            "features": ["General Features, 15-50 hours battery life, Improved Sound, Hybrid Active Noise Cancelling (25db), Transparency, Special Audio, Metal Cups, App  (NOT CONFIRMED, UNKNOWN)"],
             "price": "$N/A USD",
             "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "Mike-YM"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
@@ -257,7 +257,7 @@
     "misc": {
         "survey_message": {
             "title": "We Value Your Feedback!",
-            "description": "Hi [user_mention] 👋,\n\nWe hope you're happy with the solution of your recent support ticket.\n\nWe're always looking for ways to improve our service, and your feedback is extremely valuable to us.\n\nPlease take a few minutes to complete our short survey and let us know how we did:\n[Survey Link](https://weare.reptronics.top/after-sales-service-survey/)\n\nYour feedback will help us to:\n\n- Understand your satisfaction with our support team\n- Identify areas where we can improve\n- Continue to provide you with the best possible service\n\nThank you for your time!\n\nSincerely,\n\nThe RepTronics Team\n\nP.S.\n\nYour responses will be kept confidential and used for internal purposes only."
+            "description": "Hi [user_mention] :wave:,\n\nWe hope you're happy with the solution of your recent support ticket.\n\nWe're always looking for ways to improve our service, and your feedback is extremely valuable to us.\n\nPlease take a few minutes to complete our short survey and let us know how we did: [Survey Link](https://weare.reptronics.top/after-sales-service-survey/)\n\nYour feedback will help us to:\n\n- Understand your satisfaction with our support team\n- Identify areas where we can improve\n- Continue to provide you with the best possible service\n\nThank you for your time!\n\nSincerely,\n\nThe RepTronics Team\n\nP.S.\n\nYour responses will be kept confidential and used for internal purposes only."
         }
 
     }

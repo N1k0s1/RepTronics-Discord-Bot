@@ -1,7 +1,9 @@
 id = [1261831251254317066]
 allowed_users = [1136290556591485039, 978886408964026378]
 import discord
-bot = discord.Bot()
+from discord.ext import commands
+
+bot = commands.Bot()
 import asyncio
 from embedbuttons import Gen2View, Gen3View, Pro1View, Pro2View, MaxesView, SellersView
 from discord.ext import tasks
@@ -30,14 +32,18 @@ async def cogs(ctx, cogs):
         await ctx.respond("Cog not found")
 #    elif:
         
-@bot.slash_command(name="unloadcog", description= "Unloads a cog of the users choosing", guild_id = id)
-async def cogs(ctx, cogs):
-    if cogs in cogs:
-        bot.unload_extension(f'cogs.{cogs}')
-        await ctx.respond(f"Successfully unloaded {cogs}")
+@bot.slash_command(name='unloadcog', description= "Unloads a cog of the users choosing", guild_id = id)
+async def unload(ctx, *, cog: str):
+    if ctx.author.id in allowed_users:
+        try:
+            bot.unload_extension(f"cogs.{cog}")
+            await ctx.send(f"Unloaded cog: {cog}")
+        except commands.ExtensionNotFound:
+            await ctx.send("Cog not found")
+        except Exception as e:
+            await ctx.send(f"Error while unloading cog: {cog}\n{e}")
     else:
-        await ctx.respond("Cog not found")
-#    elif:
+        await ctx.send("You do not have permission to use this command.")
 
 @bot.slash_command(name="quiz", description="Sends link to quiz", guild_id = id)
 async def quiz(ctx):
