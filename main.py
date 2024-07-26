@@ -15,6 +15,8 @@ from dotenv import load_dotenv
 load_dotenv("token.env")
 bot_token = os.getenv("DISCORD_BOT_TOKEN")
 
+apringle = 978886408964026378
+
 with open('data.json') as f:
     data = json.load(f)
 
@@ -33,8 +35,17 @@ async def status_task() -> None:
 async def on_ready():
     status_task.start()
     print(f"We have logged in as {bot.user}")
-    await bot.sync_commands()
+#    await bot.sync_commands()
     print(f"Succesfully synced commands")
+    try:
+        user = await bot.fetch_user(apringle)
+        if user:
+            await user.send("Hello! I am now online.")
+        else:
+            print("User not found")
+    except Exception as e:
+        print(f"Error fetching user: {e}")
+
 
 @bot.slash_command(name="loadcog", description="Loads a cog of the user's choosing", guild_id=id)
 async def loadcog(ctx, *, cog: str):
@@ -135,5 +146,8 @@ async def send_survey(ctx, user: discord.Member):
         await ctx.respond(f"Survey sent to {user.display_name}.")
     else:
         await ctx.respond("You do not have permission to use this command.", ephemeral=True)
+
+# @bot.slash_command(name="modmail" description="Sends a message to the modmail channel", guild_id=id)
+#
 
 bot.run(bot_token)
