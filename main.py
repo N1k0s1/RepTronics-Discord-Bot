@@ -76,7 +76,8 @@ async def unload(ctx, *, cog: str):
 @bot.slash_command(name="quiz", description="Sends link to quiz", guild_id=id)
 async def quiz(ctx):
     if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
-        await ctx.respond("https://weare.reptronics.top/category/quiz/")
+        embed = discord.Embed(title="Quiz", description="Click [here](https://weare.reptronics.top/category/quiz/) to take the quiz!")
+        await ctx.respond(embed=embed)
     else:
         await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
 
