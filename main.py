@@ -151,4 +151,4 @@ async def send_survey(ctx, user: discord.Member):
 # @bot.slash_command(name="modmail" description="Sends a message to the modmail channel", guild_id=id)
 #
 
-bot.run(tokenhere)
+bot.run(bot_token)
