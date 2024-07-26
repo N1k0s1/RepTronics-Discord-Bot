@@ -1,4 +1,4 @@
-id = [1261831251254317066]
+id = 718418845194256404
 allowed_users = [1136290556591485039, 978886408964026378]
 allowed_channel_id = 1263491691638292521
 import discord
@@ -6,6 +6,7 @@ from discord.ext import commands
 import os
 bot = commands.Bot()
 import asyncio
+from embed import create_survey_embed
 from embedbuttons import Gen2View, Gen3View, Pro1View, Pro2View, MaxesView, SellersView
 from discord.ext import tasks
 import json 
@@ -17,10 +18,16 @@ bot_token = os.getenv("DISCORD_BOT_TOKEN")
 with open('data.json') as f:
     data = json.load(f)
 
-@tasks.loop()
+@tasks.loop(seconds=20)
 async def status_task() -> None:
-    await bot.change_presence(status="Reading the Ultimate Guide", activity=discord.Streaming(name="Ultimate Guide", url="https://weare.reptronics.top/blog/"))
-    await asyncio.sleep(60)
+    guild = bot.get_guild(id)
+    if guild:
+        member_count = guild.member_count
+        await bot.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.watching, name=f"{member_count} members!"))
+        await asyncio.sleep(20)
+        await bot.change_presence(status=discord.Status.online, activity=discord.Streaming(name="Ultimate Guide", url="https://weare.reptronics.top/blog/"))
+    else:
+        print("Guild not found")
 
 @bot.event
 async def on_ready():
@@ -29,13 +36,18 @@ async def on_ready():
     await bot.sync_commands()
     print(f"Succesfully synced commands")
 
-@bot.slash_command(name="loadcog", description= "Loads a cog of the users choosing", guild_id = id)
-async def cogs(ctx, cogs):
-    if cogs in cogs:
-        bot.load_extension(f'cogs.{cogs}')
-        await ctx.respond(f"Successfully loaded {cogs}")
+@bot.slash_command(name="loadcog", description="Loads a cog of the user's choosing", guild_id=id)
+async def loadcog(ctx, *, cog: str):
+    if ctx.author.id in allowed_users:
+        try:
+            bot.load_extension(f"cogs.{cog}")
+            await ctx.send(f"Successfully loaded cog: {cog}")
+        except commands.ExtensionNotFound:
+            await ctx.send("Cog not found")
+        except Exception as e:
+            await ctx.send(f"Error while loading cog: {cog}\n{e}")
     else:
-        await ctx.respond("Cog not found")
+        await ctx.send("You do not have permission to use this command.", ephemeral=True)
         
 @bot.slash_command(name='unloadcog', description= "Unloads a cog of the users choosing", guild_id = id)
 async def unload(ctx, *, cog: str):
@@ -118,11 +130,7 @@ async def sellers(ctx):
 async def send_survey(ctx, user: discord.Member):
     if ctx.author.id in allowed_users:
         survey_data = data['misc']['survey_message']
-        embed = discord.Embed(
-            title=survey_data['title'],
-            description=survey_data['description'].replace('[user_mention]', user.mention),
-            color=discord.Color.blue()
-        )
+        embed = create_survey_embed(user, survey_data)
         await user.send(embed=embed)
         await ctx.respond(f"Survey sent to {user.display_name}.")
     else:

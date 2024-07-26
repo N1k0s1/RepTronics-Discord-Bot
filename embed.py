@@ -27,3 +27,12 @@ def sellerembed(title, seller):
         embed.add_field(name="Discord", value=seller['discord'], inline=False)
         embed.add_field(name="Website", value=seller['store_link'], inline=False)
         return embed
+
+# EXTRA EMBEDS ETC.
+def create_survey_embed(user: discord.Member, survey_data: dict) -> discord.Embed:
+    embed = discord.Embed(
+        title=survey_data['title'],
+        description=survey_data['description'].replace('[user_mention]', user.mention),
+        color=discord.Color.blue()
+    )
+    return embed
