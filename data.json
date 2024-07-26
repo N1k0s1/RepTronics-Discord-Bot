@@ -32,21 +32,21 @@
         },
         "gen3a10": {
             "chipmodels": "v1.1 Huilian | Huilian A10",
-            "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Improved Wireless Charging | Touch Controls | Quick Switch | MagSafe | App"],
+            "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
             "price": "$33 USD",  
             "sellers": ["Jenny"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
         "gen31562u": {
             "chipmodels": "v1.1U | Airoha 1562U",
-            "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Improved Wireless Charging | Touch Controls | Quick Switch | MagSafe | App"],
+            "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
             "price": "$19-22 USD",  
             "sellers": ["Dyson", "Criss"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
         "gen31562e": {
             "chipmodels": "v1.1E | Airoha 1562E",
-            "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Improved Wireless Charging | Touch Controls | Quick Switch | MagSafe | App"],
+            "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
             "price": "$25.5-32 USD",  
             "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "BXM/Sunfler", "Mike-YM", "Criss"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
@@ -67,21 +67,21 @@
         },
         "pro11562f": {
             "chipmodels": "v4.0F | Airoha 1562F",
-            "features": ["General Featues | 4-6 Hour Battery Life | Improved Sound | Improved Build Quality | (Emulated) Spatial Audio | Hybrid Active Noise Cancelling (22db*) | Transparency | Improved Wireless Charging | Touch Controls | MagSafe | App"],
+            "features": ["General Featues | 4-6 Hour Battery Life | Improved Sound | Improved Build Quality | (Emulated) Spatial Audio | Hybrid Active Noise Cancelling (22db*) | Transparency | Improved Wireless Charging | Force Touch | MagSafe | App"],
             "price": "$25 USD",  
             "sellers": ["Criss"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
         "pro11562a": {
             "chipmodels": "v4.5A | Airoha 1562A",
-            "features": ["General Featues | 4-6 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Hybrid Active Noise Cancelling (25db*) | Transparency | Improved Wireless Charging | Touch Controls | MagSafe | App"],
+            "features": ["General Featues | 4-6 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Hybrid Active Noise Cancelling (25db*) | Transparency | Improved Wireless Charging | Force Touch | MagSafe | App"],
             "price": "$42 USD",  
             "sellers": ["Jenny"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
         "pro11562ae": {
             "chipmodels": "v4.6TB/HR | Airoha 1562AE",
-            "features": ["General Featues | 6-8 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Hybrid Active Noise Cancelling 33.6db* (TB) 34.2db* (HR) | Transparency | Improved Wireless Charging | Touch Controls | Quick Switch | MagSafe | App"],
+            "features": ["General Featues | 6-8 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Hybrid Active Noise Cancelling 33.6db* (TB) 34.2db* (HR) | Transparency | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
             "price": "$42-50 USD",  
             "sellers": ["Jenny", "HiCity", "Dyson", "Sam", "BXM/Sunfler", "Criss"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."

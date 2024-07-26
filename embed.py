@@ -5,7 +5,7 @@ with open('data.json') as f:
 
 def genembed(title, version):
         # Define the embed1 variable
-        embed1 = discord.Embed(title=title, color=discord.Color.blue())
+        embed1 = discord.Embed(title=title, color=discord.Color.green())
         product = data['versions'][version]
 
         embed1.add_field(name="Chip Models", value=product['chipmodels'], inline=False)
@@ -20,7 +20,7 @@ def genembed(title, version):
         return embed1
 
 def sellerembed(title, seller):
-        embed = discord.Embed(title=title, color=discord.Color.blue())
+        embed = discord.Embed(title=title, color=discord.Color.green())
         seller = data['sellers'][seller]
 
         embed.add_field(name="WhatsApp", value=seller['whatsapp'], inline=False)
@@ -33,6 +33,6 @@ def create_survey_embed(user: discord.Member, survey_data: dict) -> discord.Embe
     embed = discord.Embed(
         title=survey_data['title'],
         description=survey_data['description'].replace('[user_mention]', user.mention),
-        color=discord.Color.blue()
+        color=discord.Color.green()
     )
     return embed
