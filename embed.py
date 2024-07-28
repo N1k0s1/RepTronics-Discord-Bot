@@ -12,7 +12,7 @@ def genembed(title, version):
         embed1.add_field(name="Features", value="\n".join(product['features']), inline=False) 
         embed1.add_field(name="Price", value=product['price'], inline=True)
         embed1.add_field(name="General Features", value=product['note'], inline=True)
-        embed1.set_footer(text="Created by apringle")
+        embed1.set_footer(text="Bot created by apringle")
         # Add seller fields
         for seller_name in product['sellers']:
             seller = data['sellers'][seller_name]
@@ -26,15 +26,15 @@ def sellerembed(title, seller):
         embed.add_field(name="WhatsApp", value=seller['whatsapp'], inline=False)
         embed.add_field(name="Discord", value=seller['discord'], inline=False)
         embed.add_field(name="Website", value=seller['store_link'], inline=False)
-        embed.set_footer(text="Created by apringle")
+        embed.set_footer(text="Bot created by apringle")
         return embed
 
 # EXTRA EMBEDS ETC.
 def create_survey_embed(user: discord.Member, survey_data: dict) -> discord.Embed:
-    embed.set_footer(text="Created by apringle")
     embed = discord.Embed(
         title=survey_data['title'],
         description=survey_data['description'].replace('[user_mention]', user.mention),
         color=discord.Color.green()
     )
+    embed.set_footer(text="Bot created by apringle")
     return embed
