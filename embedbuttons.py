@@ -209,19 +209,9 @@ class SellersView(discord.ui.View):
         embed = sellerembed("Jenny", "Jenny")
         await interaction.response.send_message(embed=embed)
 
-    @discord.ui.button(label='Dyson', custom_id='dyson', style=discord.ButtonStyle.green)
-    async def on_button4(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed = sellerembed("Dyson", "Dyson")
-        await interaction.response.send_message(embed=embed)
-
     @discord.ui.button(label='Mike-YM', custom_id='Mike-YM', style=discord.ButtonStyle.green)
     async def on_button5(self, button: discord.ui.Button, interaction: discord.Interaction):
         embed = sellerembed("Mike-YM", "Mike-YM")
-        await interaction.response.send_message(embed=embed)
-
-    @discord.ui.button(label='Beschan', custom_id='Beschan', style=discord.ButtonStyle.green)
-    async def on_button6(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed = sellerembed("Beschan", "Beschan")
         await interaction.response.send_message(embed=embed)
 
     @discord.ui.button(label='York', custom_id='York', style=discord.ButtonStyle.green)

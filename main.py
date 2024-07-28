@@ -144,7 +144,8 @@ async def send_survey(ctx, user: discord.Member):
         survey_data = data['misc']['survey_message']
         embed = create_survey_embed(user, survey_data)
         await user.send(embed=embed)
-        await ctx.respond(f"Survey sent to {user.display_name}.")
+        embed = discord.Embed(title="Survey", description=f"Survey sent to {user.display_name}.", color=discord.Color.blue())
+        await ctx.respond(embed=embed)
     else:
         await ctx.respond("You do not have permission to use this command.", ephemeral=True)
 
