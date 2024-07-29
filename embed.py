@@ -12,7 +12,7 @@ def genembed(title, version):
         embed1.add_field(name="Features", value="\n".join(product['features']), inline=False) 
         embed1.add_field(name="Price", value=product['price'], inline=True)
         embed1.add_field(name="General Features", value=product['note'], inline=True)
-        embed1.set_footer(text="Bot created by apringle")
+        embed1.set_footer(text="Bot created by apringle", icon_url="https://styles.redditmedia.com/t5_38xyy/styles/communityIcon_mk1i0se5yboa1.png")
         # Add seller fields
         for seller_name in product['sellers']:
             seller = data['sellers'][seller_name]
@@ -26,7 +26,7 @@ def sellerembed(title, seller):
         embed.add_field(name="WhatsApp", value=seller['whatsapp'], inline=False)
         embed.add_field(name="Discord", value=seller['discord'], inline=False)
         embed.add_field(name="Website", value=seller['store_link'], inline=False)
-        embed.set_footer(text="Bot created by apringle")
+        embed.set_footer(text="Bot created by apringle", icon_url="https://styles.redditmedia.com/t5_38xyy/styles/communityIcon_mk1i0se5yboa1.png")
         return embed
 
 # EXTRA EMBEDS ETC.
@@ -36,5 +36,5 @@ def create_survey_embed(user: discord.Member, survey_data: dict) -> discord.Embe
         description=survey_data['description'].replace('[user_mention]', user.mention),
         color=discord.Color.green()
     )
-    embed.set_footer(text="Bot created by apringle")
+    embed.set_footer(text="Bot created by apringle", icon_url="https://styles.redditmedia.com/t5_38xyy/styles/communityIcon_mk1i0se5yboa1.png")
     return embed

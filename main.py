@@ -40,7 +40,9 @@ async def on_ready():
     try:
         user = await bot.fetch_user(apringle)
         if user:
-            await user.send("Hello! I am now online.")
+            embed = discord.Embed(title="Bot Status", description="The RepTronics discord bot is currently online!!", color=discord.Color.green())
+            embed.set_footer(text="Bot created by apringle", icon_url="https://styles.redditmedia.com/t5_38xyy/styles/communityIcon_mk1i0se5yboa1.png")
+            await user.send(embed=embed)        
         else:
             print("User not found")
     except Exception as e:
@@ -76,14 +78,17 @@ async def unload(ctx, *, cog: str):
 @bot.slash_command(name="quiz", description="Sends link to quiz", guild_id=id)
 async def quiz(ctx):
     if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
-        embed = discord.Embed(title="Quiz", description="Click [here](https://weare.reptronics.top/category/quiz/) to take the quiz!", color=discord.Color.green())
+        embed = discord.Embed(title="AirPod Quizzes", description="Click [here](https://weare.reptronics.top/category/quiz/) to take the quiz!", color=discord.Color.green())
+        embed.set_footer(text="Bot created by apringle", icon_url="https://styles.redditmedia.com/t5_38xyy/styles/communityIcon_mk1i0se5yboa1.png")
         await ctx.respond(embed=embed)
     else:
         await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
 
 @bot.slash_command(guild_id = id)
 async def ping(ctx):
-    await ctx.respond(f"Pong! ({bot.latency*1000}ms)")
+    embed = discord.Embed(title="Pong!", description=f"Latency: {bot.latency*1000}ms", color=discord.Color.green())
+    embed.set_footer(text="Bot created by apringle", icon_url="https://styles.redditmedia.com/t5_38xyy/styles/communityIcon_mk1i0se5yboa1.png")
+    await ctx.respond(embed=embed)
 
 @bot.slash_command(guild_id = id)
 async def sync(ctx):
@@ -144,7 +149,7 @@ async def send_survey(ctx, user: discord.Member):
         survey_data = data['misc']['survey_message']
         embed = create_survey_embed(user, survey_data)
         await user.send(embed=embed)
-        embed1 = discord.Embed(title="Survey", description=f"Survey sent to {user.display_name}.", color=discord.Color.blue())
+        embed1 = discord.Embed(title="Ticket Survey", description=f"Ticket Survey sent to {user.display_name}.", color=discord.Color.green())
         await ctx.respond(embed=embed1)
     else:
         await ctx.respond("You do not have permission to use this command.", ephemeral=True)
