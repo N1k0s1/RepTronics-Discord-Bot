@@ -12,6 +12,7 @@ from discord.ext import tasks
 import json 
 # BOT TOKEN
 from dotenv import load_dotenv
+import logging
 load_dotenv("token.env")
 bot_token = os.getenv("DISCORD_BOT_TOKEN")
 
@@ -19,6 +20,11 @@ apringle = 978886408964026378
 
 with open('data.json') as f:
     data = json.load(f)
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', handlers=[
+    logging.FileHandler("bot.log"),
+    logging.StreamHandler()
+])
 
 @tasks.loop(seconds=20)
 async def status_task() -> None:
@@ -29,7 +35,7 @@ async def status_task() -> None:
         await asyncio.sleep(20)
         await bot.change_presence(status=discord.Status.online, activity=discord.Streaming(name="Ultimate Guide", url="https://weare.reptronics.top/blog/"))
     else:
-        print("Guild not found")
+        logging.warning("Guild not found")
 
 @bot.event
 async def on_ready():
