@@ -8,6 +8,7 @@ from embedbuttons import Gen2View, Gen3View, Pro1View, Pro2View, MaxesView, Sell
 from dotenv import load_dotenv
 import logging
 
+ts_users = [1136290556591485039, 978886408964026378, 648794335697043468]
 id = 718418845194256404
 allowed_users = [1136290556591485039, 978886408964026378]
 allowed_channel_id = 1263491691638292521
@@ -171,7 +172,7 @@ async def sellers(ctx):
 
 @bot.slash_command(name='ts', description='Sends the user a survey', guild_id=id)
 async def send_survey(ctx, user: discord.Member):
-    if ctx.author.id in allowed_users:
+    if ctx.author.id in ts_users:
         survey_data = data['misc']['survey_message']
         embed = create_survey_embed(user, survey_data)
         await user.send(embed=embed)
