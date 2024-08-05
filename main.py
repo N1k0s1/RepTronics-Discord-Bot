@@ -59,7 +59,8 @@ async def notify_admin(ctx, message):
     try:
         user = await bot.fetch_user(apringle)
         if user:
-            await user.send(message)
+            embed = discord.Embed(title="Notification", description=message, color=discord.Color.blue())
+            await user.send(embed=embed)
     except Exception as e:
         print(f"Error notifying admin: {e}")
 

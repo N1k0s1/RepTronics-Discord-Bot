@@ -39,7 +39,7 @@
         },
         "gen31562u": {
             "chipmodels": "v1.1U | Airoha 1562U",
-            "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
+            "features": ["General Featues | 5-9 Hour Battery Life | Improved Sound | Improved Build Quality | Spatial Audio (Emulated) | Improved Wireless Charging | Force Touch | Quick Switch | MagSafe | App"],
             "price": "$22 USD",  
             "sellers": ["Criss"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
@@ -146,7 +146,7 @@
         },
         "maxesjlplastic": {
             "chipmodels": "JL",
-            "features": ["General Features, 15-50 hours battery life, Improved Sound, Hybrid Active Noise Cancelling (25db), Transparency, Spacial Audio, Plastic Cups, App"],
+            "features": ["General Features, 15-50 hours battery life, Plastic Cups"],
             "price": "$N/A USD",
             "sellers": [],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
