@@ -152,17 +152,17 @@ class PlasticMaxes(discord.ui.View):
 
     @discord.ui.button(label='Zhongke Lanxun', custom_id='zl', style=discord.ButtonStyle.green)
     async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = genembed("Maxes (Avalible in both Plastic & Aluminium Sprayed) | Zhongke Lanxun", "maxeszlplastic")
+        embed1 = genembed("Maxes (Available in both Plastic & Aluminium Sprayed) | Zhongke Lanxun", "maxeszlplastic")
         await interaction.response.send_message(embed=embed1)
 
     @discord.ui.button(label='Qualcommm', custom_id='qualcomm', style=discord.ButtonStyle.green)
     async def on_button3(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = genembed("Maxes (Avalible in both Plastic & Aluminium Sprayed) | Qualcomm", "maxesqualcommplastic")
+        embed1 = genembed("Maxes (Available in both Plastic & Aluminium Sprayed) | Qualcomm", "maxesqualcommplastic")
         await interaction.response.send_message(embed=embed1)
 
     @discord.ui.button(label='Airoha 1561M', custom_id='1561m', style=discord.ButtonStyle.green)
     async def on_button3(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = genembed("Maxes (Avalible in both Plastic & Aluminium Sprayed) | Airoha 1561M", "maxes1561mplastic")
+        embed1 = genembed("Maxes (Available in both Plastic & Aluminium Sprayed) | Airoha 1561M", "maxes1561mplastic")
         await interaction.response.send_message(embed=embed1)
 
 class MetalMaxes(discord.ui.View):
