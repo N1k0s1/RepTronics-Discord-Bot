@@ -77,7 +77,8 @@ async def loadcog(ctx, *, cog: str):
         await notify_admin(ctx, f"{ctx.author} used the loadcog command.")
     else:
         await ctx.send("You do not have permission to use this command.", ephemeral=True)
-        await notify_admin(ctx, f"{ctx.author} tried to use the loadcog command without permission.")
+        embed = discord.Embed(title="Permission Error", description=f"{ctx.author} tried to use the loadcog command without permission.", color=discord.Color.red())
+        await notify_admin(ctx, embed=embed)
 
 @bot.slash_command(name='unloadcog', description= "Unloads a cog of the users choosing", guild_id = id)
 async def unload(ctx, *, cog: str):
@@ -176,7 +177,7 @@ async def send_survey(ctx, user: discord.Member):
     if ctx.author.id in ts_users:
         survey_data = data['misc']['survey_message']
         embed = create_survey_embed(user, survey_data)
-        await user.send(embed=embed)
+        await user.send(embed=embed) 
         embed1 = discord.Embed(title="Ticket Survey", description=f"Ticket Survey sent to {user.display_name}.", color=discord.Color.green())
         await ctx.respond(embed=embed1)
         await notify_admin(ctx, f"{ctx.author} used the send_survey command.")
