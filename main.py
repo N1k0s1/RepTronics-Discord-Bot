@@ -8,20 +8,29 @@ from embedbuttons import Gen2View, Gen3View, Pro1View, Pro2View, MaxesView, Sell
 from dotenv import load_dotenv
 import logging
 
-ts_users = [1136290556591485039, 978886408964026378, 648794335697043468]
-id = 718418845194256404
-allowed_users = [1136290556591485039, 978886408964026378]
-allowed_channel_id = 1263491691638292521
-apringle = 978886408964026378
-
+# Load environment variables
 load_dotenv("token.env")
 bot_token = os.getenv("DISCORD_BOT_TOKEN")
 
-bot = commands.Bot()
-
+# Load data from JSON file
 with open('data.json') as f:
     data = json.load(f)
 
+# Load IDs from ids.json
+with open('ids.json') as f:
+    ids = json.load(f)
+
+# Constants
+id = ids["id"]
+allowed_users = ids["allowed_users"]
+allowed_channel_id = ids["allowed_channel_id"]
+admin = ids["admin"]
+ts_users = ids["ts_users"]
+
+# Initialize bot
+bot = commands.Bot()
+
+# Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', handlers=[
     logging.FileHandler("bot.log"),
     logging.StreamHandler()
@@ -45,7 +54,7 @@ async def on_ready():
     await bot.sync_commands()
     print(f"Succesfully synced commands")
     try:
-        user = await bot.fetch_user(apringle)
+        user = await bot.fetch_user(admin)
         if user:
             embed = discord.Embed(title="Bot Status", description="The RepTronics discord bot is currently online!!", color=discord.Color.green())
             embed.set_footer(text="Bot created by apringle", icon_url="https://styles.redditmedia.com/t5_38xyy/styles/communityIcon_mk1i0se5yboa1.png")
@@ -57,7 +66,7 @@ async def on_ready():
 
 async def notify_admin(ctx, message):
     try:
-        user = await bot.fetch_user(apringle)
+        user = await bot.fetch_user(admin)
         if user:
             embed = discord.Embed(title="Notification", description=message, color=discord.Color.blue())
             await user.send(embed=embed)
