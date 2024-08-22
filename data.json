@@ -94,7 +94,7 @@
             "sellers": ["Jenny", "HiCity", "Sam", "BXM/Sunfler", "Mike-YM", "Criss"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
             },
-        "pro2hs2ultra": {
+        "pro2h2sultra": {
             "chipmodels": "v1.2 Huilian | Huilian 277",
             "features": ["General Features | 4-6 hours battery life | Improved Sound | Improved Build Quality | Improved Wireless Charging | MagSafe | Hybrid Active Noise Cancelling (30db*) | Transparency | Force Touch | Spacial Audio | Quick Switch | USB-C | Case Speaker | App"],
             "price": "$45-52 USD",  
@@ -109,14 +109,14 @@
             "sellers": ["Jenny", "HiCity", "BXM/Sunfler", "Sam", "Mike-YM", "Criss"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
-        "pro2hs2pro": {
+        "pro2h2spro": {
             "chipmodels": "v1.1 Huilian | Huilian277",
             "features": ["General Features | 4-6 hours battery life | Improved Sound | Improved Build Quality | Improved Wireless Charging | MagSafe | Hybrid Active Noise Cancelling (30db*) | Transparency | Force Touch | Spacial Audio | Quick Switch | lightning | Case Speaker | App"],
             "price": "$50 USD",  
             "sellers": ["Jenny"],
             "note": "Renaming, Find My (Find My Network Isn't Supported), Audio Share, Pop-up, Battery Report, In-Ear Detection, About Information, iCloud Connect is not supported by any replica."
         },
-        "pro2hs2": {
+        "pro2h2s": {
             "chipmodels": "v1 Huilian | Huilian 247B",
             "features": ["General Features | 4-6 hours battery life | Improved Sound | Improved Build Quality | Improved Wireless Charging | MagSafe | Hybrid Active Noise Cancelling (25db*) | Transparency | Force Touch | Spacial Audio | lightning | Case Speaker | App"],
             "price": "$45 USD",  

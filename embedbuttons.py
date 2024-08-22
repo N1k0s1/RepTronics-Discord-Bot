@@ -101,19 +101,19 @@ class Pro2View(discord.ui.View):
         embed1 = genembed("Pro 2 | Airoha 1562AE (HR)", "pro21562aehr")
         await interaction.response.send_message(embed=embed1)
 
-    @discord.ui.button(label='HS2', custom_id='hs2', style=discord.ButtonStyle.green)
+    @discord.ui.button(label='H2S', custom_id='h2s', style=discord.ButtonStyle.green)
     async def on_button4(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = genembed("Pro 2 | HS2", "pro2hs2")
+        embed1 = genembed("Pro 2 | H2S", "pro2h2s")
         await interaction.response.send_message(embed=embed1)
 
-    @discord.ui.button(label='HS2 Pro', custom_id='hs2pro', style=discord.ButtonStyle.green)
+    @discord.ui.button(label='H2S Pro', custom_id='h2spro', style=discord.ButtonStyle.green)
     async def on_button5(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = genembed("Pro 2 | HS2 Pro", "pro2hs2pro")
+        embed1 = genembed("Pro 2 | H2S Pro", "pro2h2spro")
         await interaction.response.send_message(embed=embed1)
 
-    @discord.ui.button(label='HS2 Ultra', custom_id='hs2ultra', style=discord.ButtonStyle.green)
+    @discord.ui.button(label='H2S Ultra', custom_id='h2sultra', style=discord.ButtonStyle.green)
     async def on_button6(self, button: discord.ui.Button, interaction: discord.Interaction):
-        embed1 = genembed("Pro 2 | HS2 Ultra", "pro2hs2ultra")
+        embed1 = genembed("Pro 2 | H2S Ultra", "pro2h2sultra")
         await interaction.response.send_message(embed=embed1)
 
     @discord.ui.button(label='Airoha 1562F', custom_id='1562F', style=discord.ButtonStyle.green)
