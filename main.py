@@ -135,7 +135,7 @@ async def sync(ctx):
 
 @bot.slash_command(name="gen2", description="Show the gen 2 menu", guild_id = id)
 async def gen2(ctx):
-    if ctx.channel.id == allowed_channel_id or ctx.author in channel_exempt:
+    if ctx.channel.id == allowed_channel_id or ctx.author.id in channel_exempt:
         await ctx.respond('Gen 2 chips - Choose an option:', view=Gen2View())
     else:
         await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
