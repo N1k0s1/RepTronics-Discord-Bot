@@ -107,7 +107,7 @@ async def unload(ctx, *, cog: str):
 
 @bot.slash_command(name="quiz", description="Sends link to quiz", guild_id=id)
 async def quiz(ctx):
-    if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
+    if ctx.channel.id == allowed_channel_id or ctx.author.id in channel_exempt:
         embed = discord.Embed(title="AirPod Quizzes", description="Click [here](https://weare.reptronics.top/category/quiz/) to take the quiz!", color=discord.Color.green())
         embed.set_footer(text="Bot created by apringle", icon_url="https://styles.redditmedia.com/t5_38xyy/styles/communityIcon_mk1i0se5yboa1.png")
         await ctx.respond(embed=embed)
@@ -143,7 +143,7 @@ async def gen2(ctx):
 
 @bot.slash_command(name="gen3", description="Show the gen 3 menu", guild_id = id)
 async def gen3(ctx):
-    if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
+    if ctx.channel.id == allowed_channel_id or ctx.author.id in channel_exempt:
         await ctx.respond('Gen 3 chips - Choose an option:', view=Gen3View())
     else:
         await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
@@ -151,7 +151,7 @@ async def gen3(ctx):
 
 @bot.slash_command(name="pro1", description="Show the pro 1 menu", guild_id = id)
 async def pro1(ctx):
-    if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
+    if ctx.channel.id == allowed_channel_id or ctx.author.id in channel_exempt:
         await ctx.respond('Pro 1 chips - Choose an option:', view=Pro1View())
     else:
         await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
@@ -159,7 +159,7 @@ async def pro1(ctx):
 
 @bot.slash_command(name="pro2", description="Show the pro 2 menu", guild_id = id)
 async def pro2(ctx):
-    if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
+    if ctx.channel.id == allowed_channel_id or ctx.author.id in channel_exempt:
         await ctx.respond('Pro 2 chips - Choose an option:', view=Pro2View())
     else:
         await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
@@ -167,7 +167,7 @@ async def pro2(ctx):
 
 @bot.slash_command(name="maxes", description="Show the maxes menu", guild_id = id)
 async def maxes(ctx):
-    if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
+    if ctx.channel.id == allowed_channel_id or ctx.author.id in channel_exempt:
         await ctx.respond('Maxes Models - Choose an option:', view=MaxesView())
     else:
         await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)
@@ -176,7 +176,7 @@ async def maxes(ctx):
 # COMMAND FOR SELLERS
 @bot.slash_command(name="sellers", description="Information about sellers", guild_id = id)
 async def sellers(ctx):
-    if ctx.channel.id == allowed_channel_id or ctx.author.guild_permissions.administrator:
+    if ctx.channel.id == allowed_channel_id or ctx.author.id in channel_exempt:
         await ctx.respond('Sellers: Choose an option.', view=SellersView())
     else:
         await ctx.respond("This command can only be used in a specific channel.", ephemeral=True)

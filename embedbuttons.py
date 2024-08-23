@@ -134,7 +134,7 @@ class MaxesView(discord.ui.View):
     @discord.ui.button(label='Metal Maxes', custom_id='metalmaxes', style=discord.ButtonStyle.green)
     async def on_button1(self, button: discord.ui.Button, interaction: discord.Interaction):
         metal_maxes_view = MetalMaxes()
-        await interaction.response.send_message(view=metal_maxes_view)
+        await interaction.response.send_message('Maxes Models - Choose an option:', view=MetalMaxes())
 
     @discord.ui.button(label='Plastic Maxes', custom_id='plasticmaxes', style=discord.ButtonStyle.green)
     async def on_button2(self, button: discord.ui.Button, interaction: discord.Interaction):
