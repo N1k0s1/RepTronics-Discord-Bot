@@ -16,6 +16,9 @@ bot_token = os.getenv("DISCORD_BOT_TOKEN")
 with open('data.json') as f:
     data = json.load(f)
 
+# Making variables for AR Sellers and AR Versioning
+arsellers = data["sellers"]["AR Sellers Websites"]
+arversioning = data["versioning"]["AR Versioning"]
 # Load IDs from ids.json
 with open('ids.json') as f:
     ids = json.load(f)
@@ -195,17 +198,19 @@ async def send_survey(ctx, user: discord.Member):
         await ctx.respond("You do not have permission to use this command.", ephemeral=True)
         await notify_admin(ctx, f"{ctx.author} tried to use the send_survey command without permission.")
 
-        @bot.event
-        async def on_message(message):
-            if "AR Sellers Websites" in message.content:
-                seller = "example_seller"
-                response = f"Hey there, we've noticed you're referencing AR. Our website for {seller} is example_website.com"
-                await message.channel.send(response)
-            elif "AR Versioning" in message.content:
-                version = "example_version"
-                response = f"Hey there, we've noticed you're referencing AR. Our versioning for that chip is {version}"
-                await message.channel.send(response)
-            await bot.process_commands(message)
+@bot.event
+async def on_message(message):
+    if arsellers in message.content:
+        seller = "example_seller"
+        website = data["sellers"]["AR Sellers Websites"].get(seller, "Website not found")
+        response = f"Hey there, we've noticed you're referencing AR websites. Our website for {seller} is {website}"
+        await message.channel.send(response)
+    elif arversioning in message.content:
+        chip = "example_chip"
+        version = data["versioning"]["AR Versioning"].get(chip, "Version not found")
+        response = f"Hey there, we've noticed you're referencing AR websites. Our versioning for that chip is {version}"
+        await message.channel.send(response)
+    await bot.process_commands(message)
 
 # @bot.slash_command(name="modmail" description="Sends a message to the modmail channel", guild_id=id)
 #
