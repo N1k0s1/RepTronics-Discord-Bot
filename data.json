@@ -252,23 +252,23 @@
 
     },
     "ar_versioning": {
-        "pro21562aehr": {
-            "version": "1.1 HR"
+        "v5.2": {
+            "version": "v1.1"
         },
-        "pro2h2spro": {
-            "version": "1.1 Huilian"
+        "v4.9": {
+            "version": "v4.6"
         },
-        "pro2h2s": {
-            "version": "1 Huilian"
+        "v4.8": {
+            "version": "v4.5"
         },
-        "pro21562f": {
+        "v4.7": {
             "version": "1F"
         },
-        "pro2blueturm": {
-            "version": "1"
+        "v3.9": {
+            "version": "n/a"
         },
-        "maxesqualcomm": {
-            "version": "Qualcomm"
+        "v3.8": {
+            "version": "n/a"
         },
         "maxes1561m": {
             "version": "Airoha 1561M"
@@ -278,29 +278,12 @@
         }
     },
     "ar websites": {
-        "pro21562aehr": {
-            "version": "1.1 HR"
+        "https://hicitypods.com/": {
+            "website": "hicity.shop"
         },
-        "pro2h2spro": {
-            "version": "1.1 Huilian"
-        },
-        "pro2h2s": {
-            "version": "1 Huilian"
-        },
-        "pro21562f": {
-            "version": "1F"
-        },
-        "pro2blueturm": {
-            "version": "1"
-        },
-        "maxesqualcomm": {
-            "version": "Qualcomm"
-        },
-        "maxes1561m": {
-            "version": "Airoha 1561M"
-        },
-        "maxesrt": {
-            "version": "Realtek 8763ESE"
+        "https://jenny.airreps.info/": {
+            "website": "jenny.reptronics.com"
+        }
         }
     }
-}
+

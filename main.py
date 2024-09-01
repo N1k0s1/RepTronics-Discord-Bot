@@ -201,13 +201,13 @@ async def send_survey(ctx, user: discord.Member):
 @bot.event
 async def on_message(message):
     if arsellers in message.content:
-        seller = "example_seller"
-        website = data["sellers"]["AR Sellers Websites"].get(seller, "Website not found")
+        seller = arsellers  # Define the 'seller' variable
+        website = data["misc"]["website"]["AR Sellers Websites"].get(seller, "Website not found")
         response = f"Hey there, we've noticed you're referencing AR websites. Our website for {seller} is {website}"
         await message.channel.send(response)
     elif arversioning in message.content:
-        chip = "example_chip"
-        version = data["versioning"]["AR Versioning"].get(chip, "Version not found")
+        chip = arversioning  # Define the 'chip' variable
+        version = data["misc"]["version"]["AR Versioning"].get(chip, "Version not found")
         response = f"Hey there, we've noticed you're referencing AR websites. Our versioning for that chip is {version}"
         await message.channel.send(response)
     await bot.process_commands(message)
