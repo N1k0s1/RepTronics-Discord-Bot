@@ -45,3 +45,7 @@ _restricted commands_
 + /ts {@user} - sends the given user a embed, containing a survey on how their support experience was      
 # Logging Features
 The bot will log when people attempt to run admin commands, when admin commands are run, or when people attempt to run commands in the non specified channels (any channel other then #bot-commands)
+
+
+![IMG_1162](https://github.com/user-attachments/assets/07233ef1-e421-42c1-a6f4-eb854b9cb5a3)
+![IMG_1163](https://github.com/user-attachments/assets/3259fcd5-9458-442e-a965-7b5d890b0500)
