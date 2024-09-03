@@ -126,6 +126,11 @@ class Pro2View(discord.ui.View):
         embed1 = genembed("Pro 2 | Airoha 1562AE", "pro21562ae")
         await interaction.response.send_message(embed=embed1)
 
+    @discord.ui.button(label='Airoha 1571', custom_id='1571', style=discord.ButtonStyle.green)
+    async def on_button9(self, button: discord.ui.Button, interaction: discord.Interaction):
+        embed1 = genembed("Pro 2 | Airoha 1571", "pro21571")
+        await interaction.response.send_message(embed=embed1)
+
 # Maxes - Plastic Buttons/Embeds
 class MaxesView(discord.ui.View):
     def __init__(self):
