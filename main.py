@@ -17,8 +17,8 @@ with open('data.json') as f:
     data = json.load(f)
 
 # Making variables for AR Sellers and AR Versioning
-arsellers = data["sellers"]["AR Sellers Websites"]
-arversioning = data["versioning"]["AR Versioning"]
+arsellers = data["AR Sellers Websites"]
+arversioning = data["ar_versioning"]
 # Load IDs from ids.json
 with open('ids.json') as f:
     ids = json.load(f)
@@ -200,19 +200,21 @@ async def send_survey(ctx, user: discord.Member):
 
 @bot.event
 async def on_message(message):
-    if arsellers in message.content:
-        seller = arsellers  # Define the 'seller' variable
-        website = data["misc"]["website"]["AR Sellers Websites"].get(seller, "Website not found")
-        response = f"Hey there, we've noticed you're referencing AR websites. Our website for {seller} is {website}"
+    for seller in arsellers:
+        if seller in message.content:
+            website = arsellers.get(seller, "Website not found")
+            response = f"Hey there, we've noticed you're referencing AR websites. Our website for {seller} is {website}"
+            await message.channel.send(response)
+            break  # Exit the loop once a match is found
+
+    for chip in arversioning:
+        version = arversioning.get(chip, "Version not found")
+        response = f"Hey there, we've noticed you're referencing AR versioning for chip {chip}. Our versioning is {version}"
         await message.channel.send(response)
-    elif arversioning in message.content:
-        chip = arversioning  # Define the 'chip' variable
-        version = data["misc"]["version"]["AR Versioning"].get(chip, "Version not found")
-        response = f"Hey there, we've noticed you're referencing AR websites. Our versioning for that chip is {version}"
-        await message.channel.send(response)
+
     await bot.process_commands(message)
 
 # @bot.slash_command(name="modmail" description="Sends a message to the modmail channel", guild_id=id)
 #
 
-bot.run(bot_token)
+bot.run("")

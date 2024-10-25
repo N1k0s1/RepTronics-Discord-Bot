@@ -283,9 +283,27 @@
         },
         "maxesrt": {
             "version": "Realtek 8763ESE"
+        },
+        "v1e": {
+            "version": "tbc"
+        },
+        "v1.2+": {
+            "version": "tbc"
+        },
+        "v3E": {
+            "version": "tbc"
+        },
+        "v1": {
+            "version": "airpod 4 tbc"
+        },
+        "v5.3": {
+            "version": "airpod 4 tbc"
+        },
+        "v2": {
+            "version": "airpod 4 tbc"
         }
     },
-    "ar websites": {
+    "AR Sellers Websites": {
         "https://hicitypods.com/": {
             "website": "hicity.shop"
         },
